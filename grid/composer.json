@@ -1,0 +1,31 @@
+{
+	"name": "swinde/grid-theme",
+	"description": "This is a Test-Child Theme for Wave-Theme from OXID eShop.",
+	"type": "oxideshop-theme",
+	"keywords": [
+		"oxid",
+		"themes",
+		"eShop"
+	],
+	"homepage": "https://internetservice.winde-ganzig.de",
+	"license": [
+		"GPL-3.0-only"
+	],
+	"minimum-stability": "dev",
+	"extra": {
+		"oxideshop": {
+			"target-directory": "grid",
+			"assets-directory": "out/grid",
+			"blacklist-filter": [
+				"*.md",
+				"*.js",
+				"*.json",
+				".git/**/*",
+				".git/**/*.*",
+				"grunt/*.*",
+				"build/**/*.*",
+				"build/**/*"
+			]
+		}
+	}
+}
