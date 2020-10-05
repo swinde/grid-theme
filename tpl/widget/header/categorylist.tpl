@@ -6,20 +6,16 @@
         [{/if}]
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-
-        <nav id="mainnav" class="navbar navbar-expand-lg navbar-light[{if $blFullwidth}] fullviewlayout[{/if}]" role="navigation">
-            <div class="">
+        [{block name="dd_widget_header_categorylist_navbar_header"}]
+        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning" type="button">  Show navbar </button>
+        [{/block}]
+        <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg" role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
-                [{block name="dd_widget_header_categorylist_navbar_header"}]
-                    <div class="navbar-header justify-content-start">
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-main-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <span class="d-lg-none">[{oxmultilang ident="DD_ROLES_BEMAIN_UIROOTHEADER"}]</span>
-                    </div>
-                [{/block}]
-                <div class="collapse navbar-collapse navbar-main-collapse" id="navbarSupportedContent">
-                    <ul id="navigation" class="navbar-nav nav">
+                <div class="offcanvas-header">
+                    <button class="btn btn-danger btn-close float-right"> &times Close </button>
+                    <h3 class="py-2 text-white">[{oxmultilang ident="CATEGORIES"}]</h3>
+                </div>
+                <ul id="navigation" class="navbar-nav nav">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
                             [{if $oViewConf->getViewThemeParam('blHomeLink')}]
                                 <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
@@ -76,9 +72,9 @@
 
                     [{/if}]
 
-                </div>
+
             [{/block}]
-            </div>
+
         </nav>
     [{/if}]
 [{/block}]
