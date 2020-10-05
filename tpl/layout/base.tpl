@@ -204,12 +204,11 @@
             </style>
         [{/if}]
     </head>
-
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
-
+    [{* Overlay OffCanvasMenu *}]
+    <b class="screen-overlay"></b>
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
-
     <div id="wrapper">
         <div class="grid-container">
             [{foreach from=$oxidBlock_pageBody item="_block"}]
@@ -217,13 +216,6 @@
             [{/foreach}]
         </div>
     </div>
-
-
-
-
-
-
-
 
     [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]
         [{include file="page/details/inc/photoswipe.tpl"}]
