@@ -38,3 +38,9 @@
 
   }
 }
+/*produktbox */
+.boxwrapper {.grid-view {
+  text-align: left;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}}
