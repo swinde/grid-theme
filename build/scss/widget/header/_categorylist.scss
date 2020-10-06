@@ -6,14 +6,19 @@
 
   }
 }
+.categorytree {
+  text-align: center;
+  @include media-breakpoint-up(lg){
+    text-align: left;
+  }
+}
+/*OffCanVas*/
 body.offcanvas-active{
   overflow:hidden;
 }
-
 .offcanvas-header{ display:none; }
-
 .screen-overlay {
-  width:0%;
+  width:0;
   height: 100%;
   z-index: 30;
   position: fixed;
