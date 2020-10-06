@@ -39,8 +39,17 @@
   }
 }
 /*produktbox */
-.boxwrapper {.grid-view {
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}}
+.boxwrapper {
+  .grid-view, .infogrid-view {
+    display: grid;
+  }
+  .grid-view{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .infogrid-view {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @include media-breakpoint-up(md){
+      grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+    }
+  }
+}
