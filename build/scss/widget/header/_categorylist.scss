@@ -6,13 +6,8 @@
 
   }
 }
-.categorytree {
-  text-align: center;
-  @include media-breakpoint-up(lg){
-    text-align: left;
-  }
-}
-/*OffCanVas*/
+
+/*OffCanvasMenue*/
 body.offcanvas-active{
   overflow:hidden;
 }
@@ -39,7 +34,9 @@ body.offcanvas-active{
 @media all and (max-width:992px) {
 
   .offcanvas-header{ display:block; }
-
+  .btn.btn-offcanvas{
+    margin-left: 1rem;
+  }
   .mobile-offcanvas{
     visibility: hidden;
     transform:translateX(-100%);
@@ -60,7 +57,7 @@ body.offcanvas-active{
     visibility: visible;
     transform: translateX(0);
     .nav-link {
-    color: $white;
-  }
+      color: $white;
+    }
   }
 }

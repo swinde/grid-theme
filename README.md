@@ -1,6 +1,7 @@
-# gridtheme
+# Grid Theme
 
-This is a basic child theme for Wave-Parent-Theme from OXID eShop.
+Dies ist ein Theme für den OXID Onlineshop auf Basis des Wave Themes. 
+Es sind Änderungen am HTML Code erfolgt, unter Verwendung des Grid Layout. 
 
 ##Installation 
 
