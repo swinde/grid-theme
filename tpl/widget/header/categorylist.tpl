@@ -7,7 +7,7 @@
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
         [{block name="dd_widget_header_categorylist_navbar_header"}]
-        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning" type="button">  Show navbar </button>
+        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
         [{/block}]
         <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg" role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
