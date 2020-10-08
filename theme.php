@@ -17,9 +17,10 @@
  *
  * @link      http://www.oxid-esales.com
  * @copyright (C) OXID eSales AG 2003-2016
- */
-$oTheme = oxNew('oxtheme');
-$oTheme->load('wave');
+
+        $oTheme = oxNew('oxtheme');
+        $oTheme->load('wave');
+*/
 /**
  * Theme Information
  */
@@ -484,6 +485,6 @@ $aTheme = array(
             'value' => '665*665',
         ),
     ),
-    'parentTheme'  	    => 'wave',
-    'parentVersions' => array($oTheme->getInfo('version'))
+    //'parentTheme'  	    => 'wave',
+    //'parentVersions' => array($oTheme->getInfo('version'))
 );

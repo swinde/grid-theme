@@ -1,7 +1,7 @@
 .grid-container {
   padding: 0 1rem;
   display: grid;
-  grid-auto-columns: minmax(10px, auto);
+  grid-template-columns: minmax(300px, auto);
   grid-auto-rows: minmax(10px, auto);
   gap: 1rem 1rem;
   align-content: center;
@@ -12,11 +12,7 @@
     "footer";
 
   @include media-breakpoint-up(sm) {
-    display: grid;
-    grid-auto-columns: minmax(10px, auto);
-    grid-auto-rows: minmax(10px, auto);
-    gap: 5px 5px;
-    align-content: center;
+    grid-template-columns: 16rem 1fr 1fr 1fr;
     grid-template-areas:
     "header header header header"
     "sidebar content content content"
@@ -24,8 +20,7 @@
 
     .header {
       display: grid;
-      grid-auto-columns: minmax(10px, auto);
-      grid-auto-rows: minmax(10px, auto);
+      grid-template-rows: subgrid;
       gap: 0;
       grid-template-areas: "logo search menu";
       grid-area: header;
@@ -40,8 +35,18 @@
   }
 }
 /*produktbox */
-.boxwrapper {.grid-view {
-  text-align: left;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-}}
+.boxwrapper {
+  .grid-view, .infogrid-view {
+    display: grid;
+  }
+  .grid-view{
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  .infogrid-view {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    @include media-breakpoint-up(md){
+      grid-template-columns: repeat(auto-fit, minmax(50%, 50%));
+    }
+
+  }
+}
