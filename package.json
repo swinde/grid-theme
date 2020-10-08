@@ -1,8 +1,8 @@
 {
-	"name": "wave-child-theme",
-	"homepage": "https://www.the-real-world.de/",
+	"name": "grid-theme",
+	"homepage": "https://internetservice.winde-ganzig.de/",
 	"version": "1.0.0",
-	"description": "This is a Test-Child Theme for Wave-Theme from OXID eShop.",
+	"description": "This is a Theme based of Wave-Theme from OXID eShop.",
 	"main": "Gruntfile.js",
 	"author": "the-real-world.de: Mario Lorenz",
 	"devDependencies": {
@@ -43,7 +43,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://bitbucket.org/therealworld/wave-child-theme/"
+		"url": "https://github.com/swinde/grid-theme/"
 	},
 	"license": "ISC",
 	"dependencies": {}
