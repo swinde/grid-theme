@@ -25,8 +25,8 @@ $oTheme->load('wave');
  */
 $aTheme = array(
     'id'          => 'grid',
-    'title'       => 'Grid Childtheme',
-    'description' => 'Wave is OXID`s official responsive theme based on the CSS framework Bootstrap 4.',
+    'title'       => 'Grid',
+    'description' => 'Grid theme is based on the OXID Wave Theme.',
     'thumbnail'   => 'theme.jpg',
     'version'     => '1.4.0',
     'author'      => '<a href="http://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
