@@ -1,8 +1,9 @@
 .grid-container {
+  padding: 0 1rem;
   display: grid;
   grid-auto-columns: minmax(10px, auto);
   grid-auto-rows: minmax(10px, auto);
-  gap: 5px 5px;
+  gap: 1rem 1rem;
   align-content: center;
   grid-template-areas:
     "header"

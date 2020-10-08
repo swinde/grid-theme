@@ -1,8 +1,8 @@
 
 body {
   font-family: $font-family-base;
-  font-size: 14px;
-  line-height: 1.42857143;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
   color: $gray-dark;
   padding-top: 0;
 
