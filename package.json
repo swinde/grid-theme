@@ -4,7 +4,7 @@
 	"version": "1.0.0",
 	"description": "This is a Theme based of Wave-Theme from OXID eShop.",
 	"main": "Gruntfile.js",
-	"author": "the-real-world.de: Mario Lorenz",
+	"author": "Steffen Winde",
 	"devDependencies": {
 		"@fortawesome/fontawesome-free": "^5.11.2",
 		"ajv": "^6.10.2",
