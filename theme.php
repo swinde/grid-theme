@@ -21,6 +21,8 @@
         $oTheme = oxNew('oxtheme');
         $oTheme->load('wave');
 */
+$oTheme = oxNew('oxtheme');
+$oTheme->load('wave');
 /**
  * Theme Information
  */
@@ -485,6 +487,6 @@ $aTheme = array(
             'value' => '665*665',
         ),
     ),
-    //'parentTheme'  	    => 'wave',
-    //'parentVersions' => array($oTheme->getInfo('version'))
+    'parentTheme' => 'wave',
+    'parentVersions' => array($oTheme->getInfo('version'))
 );
