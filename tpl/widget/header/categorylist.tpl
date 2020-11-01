@@ -7,13 +7,13 @@
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
         [{block name="dd_widget_header_categorylist_navbar_header"}]
-        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
+        <button data-trigger="#navbar_main" class="d-lg-none btn btn-outline-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
         [{/block}]
         <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg" role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
                 <div class="offcanvas-header">
                     <button class="btn btn-danger btn-close float-right"> &times Close </button>
-                    <h3 class="py-2 text-white">[{oxmultilang ident="CATEGORIES"}]</h3>
+                    <h3 class="py-2">[{oxmultilang ident="CATEGORIES"}]</h3>
                 </div>
                 <ul id="navigation" class="navbar-nav nav">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]

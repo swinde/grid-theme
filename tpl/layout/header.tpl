@@ -53,10 +53,10 @@
                             [{include file="widget/header/search.tpl"}]
                         </div>
 
-            <!--verschoben in sidebar-->
-            [{*block name="layout_header_bottom"}]
+
+            [{block name="layout_header_bottom"}]
                 [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
-            [{/block*}]
+            [{/block}]
 
 
 [{/block}]

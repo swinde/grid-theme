@@ -9,10 +9,7 @@
             [{include file="layout/header.tpl"}]
             [{/block}]
         </header>
-        <!--Sidebar-->
-        <aside class="sidebar">
-            [{include file="layout/sidebar.tpl"}]
-        </aside>
+
         <div class="content">
             [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
             [{include file="widget/promoslider.tpl"}]

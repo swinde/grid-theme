@@ -1,63 +1,9 @@
-.navbar-expand-lg .navbar-nav {
+/*.navbar-expand-lg .navbar-nav {
 
   font-size: larger;
   flex-direction: column !important;
   @include media-breakpoint-up(lg){
 
   }
-}
+}*/
 
-/*OffCanvasMenue*/
-body.offcanvas-active{
-  overflow:hidden;
-}
-.offcanvas-header{ display:none; }
-.screen-overlay {
-  width:0;
-  height: 100%;
-  z-index: 30;
-  position: fixed;
-  top: 0;
-  left: 0;
-  opacity:0;
-  visibility:hidden;
-  background-color: rgba(86, 85, 85, 0.8);
-  transition:opacity .2s linear, visibility .1s, width 1s ease-in;
-}
-.screen-overlay.show {
-  transition:opacity .5s ease, width 0s;
-  opacity:1;
-  width:100%;
-  visibility:visible;
-}
-
-@media all and (max-width:992px) {
-
-  .offcanvas-header{ display:block; }
-  .btn.btn-offcanvas{
-    margin-left: 1rem;
-  }
-  .mobile-offcanvas{
-    visibility: hidden;
-    transform:translateX(-100%);
-    border-radius:0;
-    display:block;
-    position: fixed;
-    top: 0; left:0;
-    height: 100%;
-    z-index: 1200;
-    width:80%;
-    overflow-y: scroll;
-    overflow-x: hidden;
-    transition: visibility .2s ease-in-out, transform .2s ease-in-out;
-
-  }
-
-  .mobile-offcanvas.show{
-    visibility: visible;
-    transform: translateX(0);
-    .nav-link {
-      color: $white;
-    }
-  }
-}
