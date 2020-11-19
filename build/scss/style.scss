@@ -13,12 +13,14 @@
 @import "../vendor/photoswipe/scss/photoswipe";
 
 @import 'vendor/flexslider';
-@import 'layout/grid';
+@import 'vendor/euf_grid';
+
 
 @import 'layout/base';
 @import 'layout/header';
 @import 'layout/footer';
 @import 'layout/sidebar';
+@import 'layout/grid';
 
 @import 'form/fieldset/user_shipping';
 @import 'form/wishlist_publish';
