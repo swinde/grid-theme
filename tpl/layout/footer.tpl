@@ -6,9 +6,7 @@
     [{if $oxcmp_user}]
     [{assign var="force_sid" value=$oView->getSidForWidget()}]
     [{/if}]
-
-    <footer class="footer" id="footer">
-        <div class="[{if $blFullwidth}]container[{else}]container-fluid[{/if}]">
+    <div class="inner">
             <div class="row mb-4">
                 <div class="col-12 col-lg-8">
                     <div class="row">
@@ -35,12 +33,12 @@
                         </section>
                         [{/block}]
                         [{if $blShowFullFooter}]
-                        [{block name="dd_footer_manufacturerlist"}]
+                        [{block name="sw_footer_sw_info"}]
                         <section class="col-12 col-md-6 col-lg-3 footer-box footer-box-manufacturers">
-                            <div class="h4 footer-box-title">[{oxmultilang ident="OUR_BRANDS"}]</div>
+                            <div class="h4 footer-box-title">[{oxmultilang ident="OUR_INFOS"}]</div>
                             <div class="footer-box-content">
-                                [{block name="dd_footer_manufacturerlist_inner"}]
-                                [{oxid_include_widget cl="oxwManufacturerList" _parent=$oView->getClassName() noscript=1 nocookie=1}]
+                                [{block name="sw_footer_sw_info_inner"}]
+                                [{include file="widget/footer/sw_info.tpl"}]
                                 [{/block}]
                             </div>
                         </section>
@@ -61,7 +59,8 @@
                 <div class="col-12 col-lg-4">
                     <div class="row">
                         <div class="col-12 mx-auto mx-lg-0">
-                            [{if $oView->showNewsletter()}]
+
+                            [{*if $oView->showNewsletter()}]
                             <section class="footer-box footer-box-newsletter">
                                 <div class="h4 footer-box-title">[{oxmultilang ident="NEWSLETTER"}]</div>
                                 <div class="footer-box-content">
@@ -71,10 +70,9 @@
                                     [{/block}]
                                 </div>
                             </section>
-                            [{/if}]
-
+                            [{/if*}]
                             [{block name="footer_social"}][{/block}]
-
+                            [{ oxcontent ident=bezahlarten_info }]
                         </div>
                     </div>
                 </div>
@@ -83,9 +81,9 @@
             [{* <<START>> Social Links *}]
             [{block name="dd_footer_social_links"}]
                 [{if $oViewConf->getViewThemeParam('sFacebookUrl') || $oViewConf->getViewThemeParam('sGooglePlusUrl') || $oViewConf->getViewThemeParam('sTwitterUrl') || $oViewConf->getViewThemeParam('sYouTubeUrl') || $oViewConf->getViewThemeParam('sBlogUrl')}]
-                    <div class="social-links">
+                    <div class="row social-links">
                     [{block name="dd_footer_social_links_inner"}]
-                    <ul class="social-links-list ">
+                    <ul class="row col-start-sm-6 social-links-list ">
                         [{block name="dd_footer_social_links_list"}]
                         [{if $oViewConf->getViewThemeParam('sFacebookUrl')}]
                         <li class="social-links-item">
@@ -139,7 +137,7 @@
                 [{/if}]
             [{/block}]
             [{* <<ENDE>> Social Links *}]
-        </div>
+
 
         [{if $oView->isPriceCalculated()}]
         [{block name="layout_page_vatinclude"}]
@@ -161,7 +159,6 @@
         [{/block}]
         [{/block}]
         [{/if}]
-    </footer>
 
     [{oxifcontent ident="oxstdfooter" object="oCont"}]
         <div class="legal">
@@ -180,4 +177,5 @@
         <div id="scRootCatChanged" class="popupBox corners FXgradGreyLight glowShadow" style="display: none;">
             [{include file="form/privatesales/basketexcl.tpl"}]
         </div>
-    [{/if}]
+        [{/if}]
+    </div>

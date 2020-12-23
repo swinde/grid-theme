@@ -3,7 +3,9 @@
 [{/if}]
 [{block name="header_main"}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-                        <div class="logo">
+<div class="inner">
+  <div class="row">
+                        <div class="col-12 logo-col">
                             [{block name="layout_header_logo"}]
                                 [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
                                 [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
@@ -13,7 +15,7 @@
                                 </a>
                             [{/block}]
                         </div>
-                        <div class="menu">
+                        <div class="col-12 menus-col">
                             [{block name="layout_header_top"}]
                                 <div class="menu-dropdowns">
                                     [{block name="dd_layout_page_header_icon_menu_languages"}]
@@ -49,16 +51,20 @@
                                 </div>
                             [{/block}]
                         </div>
-                        <div class="search">
+                        <div class="col-12 search-col">
                             [{include file="widget/header/search.tpl"}]
                         </div>
+                        [{block name="layout_header_bottom"}]
+                        [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+                        [{/block}]
+                    </div>
 
 
-            [{block name="layout_header_bottom"}]
-                [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
-            [{/block}]
 
 
+
+
+</div>
 [{/block}]
 
 [{insert name="oxid_newbasketitem" tpl="widget/minibasket/newbasketitemmsg.tpl" type="message"}]

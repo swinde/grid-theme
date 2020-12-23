@@ -7,9 +7,9 @@
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
         [{block name="dd_widget_header_categorylist_navbar_header"}]
-        <button data-trigger="#navbar_main" class="d-lg-none btn btn-outline-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
+        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
         [{/block}]
-        <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg" role="navigation">
+        <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg col-12" role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
                 <div class="offcanvas-header">
                     <button class="btn btn-danger btn-close float-right"> &times Close </button>
@@ -59,6 +59,7 @@
                                 [{/if}]
                             [{/foreach}]
                         [{/block}]
+                    [{block name="widget_header_blog_categorylist"}][{/block}]
                     </ul>
 
                     

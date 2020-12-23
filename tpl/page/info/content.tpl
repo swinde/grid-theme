@@ -5,9 +5,9 @@
     [{assign var="template_title" value=$oView->getTitle()}]
 
     <h1 class="page-header">[{$template_title}]</h1>
-    <article class="cmsContent">
-        [{$oView->getParsedContent()}]
-    </article>
+    <section class="cmsContent">
+                    [{$oView->getParsedContent()}]
+    </section>
 
     [{insert name="oxid_tracker" title=$template_title}]
 [{/capture}]

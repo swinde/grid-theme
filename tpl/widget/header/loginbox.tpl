@@ -15,6 +15,12 @@
             [{if $oViewConf->getTopActiveClassName() eq "content"}]
                 <input type="hidden" name="oxcid" value="[{$oViewConf->getContentId()}]">
             [{/if}]
+            [{if $oViewConf->getTopActiveClassName() eq "blog" || $oViewConf->getTopActiveClassName()
+            eq "blogcatlist"}]
+        <input type="hidden" name="odpostid" value="[{$oViewConf->getPostId()}]">
+        <input type="hidden" name="oxloadid" value="[{$oViewConf->getPostLoadId()}]">
+        <input type="hidden" name="pcatid" value="[{$oViewConf->getActPostCat()}]">
+            [{/if}]
             <input type="hidden" name="pgNr" value="[{$oView->getActPage()}]">
             <input type="hidden" name="CustomError" value="loginBoxErrors">
             [{if $oViewConf->getActArticleId()}]

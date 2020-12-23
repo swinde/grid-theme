@@ -42,7 +42,7 @@
                 </div>
             [{/block}]
 
-            <div class="checkoutCollumns clear">
+            <div class="checkoutCollumns row clear">
                 <div class="card">
                     <div class="card-header">
                         <h3 class="card-title">[{oxmultilang ident="ACCOUNT_INFORMATION"}]</h3>

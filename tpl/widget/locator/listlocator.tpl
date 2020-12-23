@@ -1,6 +1,6 @@
 <div class="refineParams row clear[{if $place == "bottom"}] bottomParams[{/if}]">
     [{if $locator}]
-        <div class="col pagination-options">
+        <div class="col-12 col-sm-12 col-lg-8 pagination-options">
             [{if $place != "bottom"}]
             <div class="float-left">
             [{/if}]
@@ -12,7 +12,7 @@
     [{/if}]
 
     [{if $listDisplayType || $sort || $itemsPerPage}]
-    <div class="col text-right options">
+    <div class="col-12 col-sm-12 col-lg-4 ">
         [{if $listDisplayType}]
         [{include file="widget/locator/listdisplaytype.tpl"}]
         [{/if}]

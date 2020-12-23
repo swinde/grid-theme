@@ -210,11 +210,9 @@
     [{* Theme SVG icons block *}]
     [{block name="theme_svg_icons"}][{/block}]
     <div id="wrapper">
-
             [{foreach from=$oxidBlock_pageBody item="_block"}]
             [{$_block}]
             [{/foreach}]
-
     </div>
 
     [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]

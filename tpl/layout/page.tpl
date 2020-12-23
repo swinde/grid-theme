@@ -10,24 +10,27 @@
             [{/block}]
         </header>
 
-        <div class="content">
-            [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
-            [{include file="widget/promoslider.tpl"}]
-            [{/if}]
+        <div id="content">
+            <div class="inner">
+                [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
+                [{include file="widget/promoslider.tpl"}]
+                [{/if}]
 
-            [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
-            [{block name="layout_breadcrumb"}]
-            [{include file="widget/breadcrumb.tpl"}]
-            [{/block}]
-            [{/if}]
+                [{if $oView->getClassName() != "start" && !$blHideBreadcrumb}]
+                [{block name="layout_breadcrumb"}]
+                [{include file="widget/breadcrumb.tpl"}]
+                [{/block}]
+                [{/if}]
                 [{$smarty.capture.loginErrors}]
-            [{block name="content_main"}]
-            [{include file="message/errors.tpl"}]
+                [{block name="content_main"}]
+                [{include file="message/errors.tpl"}]
 
-            [{foreach from=$oxidBlock_content item="_block"}]
-            [{$_block}]
-            [{/foreach}]
-            [{/block}]
+                [{foreach from=$oxidBlock_content item="_block"}]
+                [{$_block}]
+                [{/foreach}]
+                [{/block}]
+            </div>
+
         </div>
         <footer class="footer">
             [{include file="layout/footer.tpl"}]
