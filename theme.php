@@ -157,6 +157,12 @@ $aTheme = array(
         ),
         array(
             'group' => 'display',
+            'name'  => 'blNavHorizontal',
+            'type'  => 'bool',
+            'value' => 0,
+        ),
+        array(
+            'group' => 'display',
             'name'  => 'blHomeLink',
             'type'  => 'bool',
             'value' => 1,
