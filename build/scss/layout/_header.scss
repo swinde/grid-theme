@@ -25,6 +25,14 @@
   }
 
   .logo {
+    &-col{
+      justify-self: center;
+      @include media-breakpoint-up(lg) {
+        grid-column: span 6/ span 6;
+        justify-self: end;
+
+      }
+    }
     &-link {
       display: block;
       width: 100%;
@@ -48,7 +56,12 @@
   }
   .menu {
     &s-col {
+      justify-self: center;
+      @include media-breakpoint-up(lg) {
+        grid-column: span 6/ span 6;
+        justify-self: start;
 
+      }
     }
     &-dropdowns {
       margin: 20px auto;
