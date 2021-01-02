@@ -3,6 +3,21 @@
         [{include file="rdfa/rdfa.tpl"}]
     [{/if}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
+    <section class="navigation">
+
+        [{block name="sidebar_categoriestree"}]
+        <div class="categorytree">
+            <section>
+                <div class="page-header h3">
+                    [{oxmultilang ident="CATEGORIES"}]
+                </div>
+                [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
+            </section>
+        </div>
+
+        [{/block}]
+    </section>
+    <section class="main">
         <!--Header-->
         <header class="header">
             [{block name="layout_header"}]
@@ -32,12 +47,13 @@
             </div>
 
         </div>
-        <footer class="footer">
+    </section>
+    <section class="footer">
+        <footer >
             [{include file="layout/footer.tpl"}]
-            [{block name="layout_init_social"}]
+            [{block name="layout_init_social"}][{/block}]
         </footer>
-    [{/block}]
-
+    </section>
     <i class="fa fa-chevron-circle-up icon-4x" id="jumptotop"></i>
 [{/capture}]
 [{include file="layout/base.tpl"}]

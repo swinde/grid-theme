@@ -7,20 +7,7 @@
 [{block name="sidebar"}]
 
 
-    [{block name="sidebar_categoriestree"}]
 
-            <div class="categorytree">
-                <section>
-                    <div class="page-header h3">
-                        [{oxmultilang ident="CATEGORIES"}]
-                    </div>
-
-                    [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
-
-                </section>
-            </div>
-
-    [{/block}]
 
     [{*block name="sidebar_tags"}]
     [{/block*}]

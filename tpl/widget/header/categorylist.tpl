@@ -1,3 +1,4 @@
+
 [{block name="dd_widget_header_categorylist"}]
     [{if $oxcmp_categories}]
         [{assign var="homeSelected" value="false"}]
@@ -9,9 +10,10 @@
         [{block name="dd_widget_header_categorylist_navbar_header"}]
         <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
         [{/block}]
-        <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg col-12" role="navigation">
+        <nav id="navbar_main" class="nav nav-bar mobile-offcanvas " role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
                 <div class="offcanvas-header">
+                    <div>[{include file="widget/header/search.tpl"}]</div>
                     <button class="btn btn-danger btn-close float-right"> &times Close </button>
                     <h3 class="py-2">[{oxmultilang ident="CATEGORIES"}]</h3>
                 </div>
