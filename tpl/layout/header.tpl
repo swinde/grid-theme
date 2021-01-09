@@ -5,18 +5,17 @@
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
     <div class="row">
 
-        <div class="col-12 logo-col">
-
+        <div class="col-12 col-md-6 col-lg-4 logo-col">
             [{block name="layout_header_logo"}]
-            [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
-            [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
-            [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
-            <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-link">
-                <img src="[{$oViewConf->getImageUrl($slogoImg)}]" alt="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" style="[{if $sLogoWidth}]width:auto;max-width:[{$sLogoWidth}]px;[{/if}][{if $sLogoHeight}]height:auto;max-height:[{$sLogoHeight}]px;[{/if}]" class="logo-img">
-            </a>
+                [{assign var="slogoImg" value=$oViewConf->getViewThemeParam('sLogoFile')}]
+                [{assign var="sLogoWidth" value=$oViewConf->getViewThemeParam('sLogoWidth')}]
+                [{assign var="sLogoHeight" value=$oViewConf->getViewThemeParam('sLogoHeight')}]
+                <a href="[{$oViewConf->getHomeLink()}]" title="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" class="logo-link">
+                    <img src="[{$oViewConf->getImageUrl($slogoImg)}]" alt="[{$oxcmp_shop->oxshops__oxtitleprefix->value}]" style="[{if $sLogoWidth}]width:auto;max-width:[{$sLogoWidth}]px;[{/if}][{if $sLogoHeight}]height:auto;max-height:[{$sLogoHeight}]px;[{/if}]" class="logo-img">
+                </a>
             [{/block}]
         </div>
-        <div class="col-12 menus-col">
+        <div class="col-12 col-md-6 col-lg-4 menus-col">
 
             [{block name="layout_header_top"}]
             <div class="menu-dropdowns">
@@ -51,21 +50,27 @@
                 [{/if}]
                 [{oxid_include_widget cl="oxwMiniBasket" nocookie=$blAnon force_sid=$force_sid}]
                 [{/block}]
+                <div class="nav-toggler">
+                    <button class="nav-toggler__button">
+		            <span class="menu-icon">
+			        <span class="menu-icon__inner"></span>
+		            </span>
+                    </button>
+                </div>
             </div>
+
             [{/block}]
+
+        </div>
+        <div class="col-12 col-lg-4 search-col">
+            [{include file="widget/header/search.tpl"}]
         </div>
     </div>
-    <div class="nav-toggler">
-        <button class="nav-toggler__button">
-		<span class="menu-icon">
-			<span class="menu-icon__inner"></span>
-		</span> MENÜ
-        </button>
-    </div>
+
     <section>
-        <header class="page-header h3">
+        [{*<header class="page-header h3">
             [{oxmultilang ident="CATEGORIES"}]
-        </header>
+        </header>*}]
         [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
     </section>
 [{/block}]
