@@ -205,9 +205,7 @@
         [{/if}]
     </head>
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
-    [{* Overlay OffCanvasMenu *}]
-    <b class="screen-overlay"></b>
-    [{* Theme SVG icons block *}]
+
     [{block name="theme_svg_icons"}][{/block}]
     <div id="wrapper">
             [{foreach from=$oxidBlock_pageBody item="_block"}]
@@ -222,6 +220,9 @@
     [{block name="base_js"}]
         [{include file="i18n/js_vars.tpl"}]
         [{oxscript include="js/script.min.js" priority=1}]
+        [{oxscript include="js/pages/breakpoints.min.js" priority=1}]
+        [{oxscript include="js/pages/browser.min.js" priority=1}]
+        [{oxscript include="js/site.js" priority=1}]
     [{/block}]
 
     [{if $oViewConf->isTplBlocksDebugMode()}]

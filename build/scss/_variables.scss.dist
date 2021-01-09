@@ -1,0 +1,91 @@
+// *
+// * Erdmann & Freunde - Nutshell
+// * Starterkit
+// * erdmann-freunde.de/nutshell/
+// *
+// * Lizenziert unter MIT OPEN SOURCE 
+// *
+
+//
+// VARIABLES
+// --------------------------------------------------
+
+// PUT YOUR SASS-VARIABLES HERE
+
+// --------------------------------------------------
+
+@import "../vendor/nutshell/scss/variables";
+
+// --------------------------------------------------
+:root{
+
+  --header-color-text: var(--header-color-text--invert);
+  --header-color-background--inverted: var(--color-gray-lighter--half);
+
+  --color-navigation-main--hover: var(--color-brand-primary);
+  --color-navigation-main--active: #09072780;
+  --nav--main__item-padding: 0.5rem;
+  --nav--main__item-padding--sm: 0.25rem;
+  --nav--main-font: var(--base-font-family-1);
+  --nav--main-font-size: 0.875rem;
+  --nav--main-font-weight: 400;
+  --submenu-background: var(--color-blue-darker);
+  --nav-mobile-color-background: var(--color-brand-secondary);
+  --nav-mobile-color-text: var(--color-text--inverted);
+  --menu-icon-width: 1.25rem;
+  --menu-icon-stroke: 2px;
+  --nav--sub__item-padding: var(--base-spacing-unit--sm);
+
+
+  --color-gray-dark:          #090727;
+  --color-gray:               #46465D;
+  --color-gray-light:         #F0F0F0;
+  --color-gray-lighter:       rgb(242, 242, 242);
+  --color-gray-lighter--half:       rgba(242, 242, 242, 50%);
+
+  --color-red-darker:        #bc0012;
+  --color-red-dark: hsl(354, 99%, 39%);
+  --color-red: hsl(353, 100%, 44%);
+  --color-red-light: hsl(354, 100%, 47%);
+  --color-red-lighter: e2001a;
+  --color-orange: #FF5408;
+  --color-white:      #ffffff;
+  --color-tint: var(--color-gray-light);
+  --color-brand-primary: var(--color-red);
+  --color-brand-secondary: var(--color-red-darker);
+  --color-brand: var(--color-brand-primary);
+  --color-highlight: var(--color-brand);
+  --color-page-background: #F0F0F0;
+  --color-text: var(--color-gray-dark);
+  --color-text--light: var(--color-gray);
+  --color-links: var(--color-red-dark);
+  --color-links-hover: var(--color-red-darker);
+  --color-btn: var(--color-brand-primary);
+  --color-btn-text: #FFFFFF;
+
+--base-color:         #444;
+  --base-font-size: 1rem;
+  --base-line-height: 1.625;
+  --base-font-size--xs: 0.875rem;
+  --base-font-size--lg: 1.125rem;
+  --base-font-size--xl: 1.25rem;
+  --base-font-family-1: 'Open Sans', sans-serif;
+  --base-font-family-2: 'Droid Serif',serif;
+  --base-font-family: var(--base-font-family-1);
+  --base-spacing-unit: 1rem;
+  --base-border-radius: 4px;
+  --base-border-width: 1px;
+  --base-border-color: #D0D0D0;
+  --color-band-highlight-background: var(--color-highlight);
+  --color-band-tint-background: var(--color-tint);
+  --color-band-dark-text: #FFFFFF;
+  --color-band-dark-background: var(--color-blue-darker);
+
+  --header-color-text--invert:#FFFFFF;
+}
+
+// PUT YOUR CUSTOM-PROPERTIES HERE
+$image-path:          "/files/theme/src/img/";
+$image-bg-path:       "/files/theme/src/img/bg/";
+$primary: var(--color-brand-primary);
+$secondary: var(--color-brand-primary);

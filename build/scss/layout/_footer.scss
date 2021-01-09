@@ -16,16 +16,16 @@
   border-bottom: 2px solid $ox-footer-border;
   background-color: $ox-footer-bg;
   color: $ox-footer-color;
-  padding: $grid-gutter-width 0;
+  padding: var(--grid__gutter) 0;
 
-  @include media-breakpoint-up(md) {
+  @include media-query(screen-md) {
     text-align: left;
   }
 
   &-box {
-    margin-bottom: $grid-gutter-width;
+    margin-bottom: var(--grid__gutter);
 
-    @include media-breakpoint-up(md) {
+    @include media-query(screen-md) {
       margin-bottom: inherit;
     }
 
@@ -117,6 +117,6 @@
 }
 
 .legal {
-  background-color: $white;
-  padding: $grid-gutter-width 0;
+  background-color: var(--color-white);
+  padding: var(--grid__gutter) 0;
 }

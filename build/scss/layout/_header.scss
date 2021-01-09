@@ -15,21 +15,16 @@
 @import '../widget/header/servicemenu';
 
 .header {
-  background-color: $ox-container-header-background-color;
+  background-color: var(--color-page-background);
   margin: 0;
   padding: 1rem 0;
 
-  .fixed-header & {
-    position: relative;
-    padding-bottom: 42px;
-  }
 
   .logo {
     &-col{
       justify-self: center;
-      @include media-breakpoint-up(lg) {
+      @include media-query(screen-lg) {
         grid-column: span 6/ span 6;
-        justify-self: end;
 
       }
     }
@@ -40,34 +35,39 @@
     &-img {
       display: block;
       margin: 0 auto;
-
-      @include media-breakpoint-up(md) {
+      @include media-query(screen-xl) {
+        //font-size: calc(var(--base-font-size--xl) / 1rem * 1em); 
+        font-size: var(--base-font-size--xl);
+      }
+      @include media-query(screen-md) {
         margin: 0;
       }
     }
   }
 
   &-box {
-    padding: $grid-gutter-width 0 10px;
+    //padding: var(--grid__gutter) 0 10px;
 
-    @include media-breakpoint-up(lg) {
-      padding: $grid-gutter-width 0;
+    @include media-query(screen-lg) {
+      //padding: var(--grid__gutter) 0;
     }
   }
   .menu {
     &s-col {
+
       justify-self: center;
-      @include media-breakpoint-up(lg) {
+      @include media-query(screen-lg) {
         grid-column: span 6/ span 6;
-        justify-self: start;
+        justify-self: end;
 
       }
     }
     &-dropdowns {
+      @include make-row;
       margin: 20px auto;
       text-align: center;
 
-      @include media-breakpoint-up(md) {
+      @include media-query(screen-md) {
         text-align: right;
         margin: 0;
       }
@@ -88,7 +88,7 @@
         > .btn {
           background-color: transparent;
           font-size: 11px;
-          color: $gray-700;
+          //color: $gray-700;
           border: 0;
         }
       }
@@ -98,9 +98,9 @@
   .navbar {
     padding: 0 0 .5rem 0;
     display: block;
-    @include media-breakpoint-up(lg) {
+    @include media-query(screen-lg) {
       padding: 0;
-      border-bottom: 1px solid $ox-listfilter-border;
+      //border-bottom: 1px solid $ox-listfilter-border;
     }
 
     &-collapse {
@@ -116,7 +116,7 @@
       border-bottom: 1px solid #ddd;
       padding: 0;
 
-      @include media-breakpoint-up(md) {
+      @include media-query(screen-md) {
         box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
         border: none;
       }
@@ -130,7 +130,7 @@
         transition: margin-top .2s;
         background-color: #fff;
 
-        @include media-breakpoint-up(md) {
+        @include media-query(screen-md) {
           background-color: rgba(255, 255, 255, 0.95);
         }
       }
@@ -148,16 +148,16 @@
     &-header {
       padding: 15px;
 
-      @include media-breakpoint-up(lg) {
+      @include media-query(screen-lg) {
         display: none;
       }
     }
 
     &-nav {
       margin: 0;
-      border-top: 1px solid $ox-listfilter-border;
+      //border-top: 1px solid $ox-listfilter-border;
 
-      @include media-breakpoint-up(lg) {
+      @include media-query(screen-lg) {
         margin: 0;
         border: 0;
       }
@@ -173,9 +173,9 @@
         font-weight: 200;
         line-height: 20px;
         padding: 10px 15px;
-        border-bottom: 1px solid $ox-listfilter-border;
+        //border-bottom: 1px solid $ox-listfilter-border;
 
-        @include media-breakpoint-up(lg) {
+        @include media-query(screen-lg) {
           border-bottom: 0;
           line-height: inherit;
           padding: inherit;
@@ -185,7 +185,7 @@
         &:focus,
         &:hover {
           > .nav-link {
-            color: $brand-secondary;
+            color: var(--color-brand-secondary);
           }
         }
 
@@ -202,11 +202,11 @@
             margin-right: -15px;
             font-size: 1rem;
 
-            @include media-breakpoint-up(lg) {
+            @include media-query(screen-lg) {
               margin-left: inherit;
               margin-right: inherit;
               position: absolute;
-              background-color: $white;
+              background-color: var(--color-white);
               box-shadow: inherit;
               border: 1px solid rgba(0, 0, 0, 0.15);
               border-radius: 0.25rem;
@@ -222,7 +222,7 @@
             padding-left: 0;
             padding-right: 0;
 
-            @include media-breakpoint-up(lg) {
+            @include media-query(screen-lg) {
               padding: 0;
               font-size: 14px;
             }
@@ -234,18 +234,18 @@
               transition: background-color .2s;
               text-decoration: none;
 
-              @include media-breakpoint-up(lg) {
-                background-color: $brand-primary;
+              @include media-query(screen-lg) {
+                background-color: var(--color-brand-primary);
                 transition: background-color .2s;
               }
 
               > .dropdown-link {
-                color: $brand-secondary;
+                color: var(--color-brand-secondary);
                 transition: color .2s;
                 text-decoration: none;
 
-                @include media-breakpoint-up(lg) {
-                  color: $white;
+                @include media-query(screen-lg) {
+                  color: var(--color-white);
                   transition: color .2s;
                 }
               }
@@ -253,23 +253,23 @@
           }
 
           &-link {
-            color: $brand-primary;
+            color: var(--color-brand-primary);
             padding: 5px 15px 5px 25px;
             display: block;
             text-decoration: none;
 
-            @include media-breakpoint-up(lg) {
-              color: $gray-900;
+            @include media-query(screen-lg) {
+              //color: $gray-900;
             }
 
             &.current,
             &:focus,
             &:hover {
-              color: $brand-secondary;
+              color: var(--color-brand-secondary);
               transition: color .2s;
 
-              @include media-breakpoint-up(lg) {
-                color: $white;
+              @include media-query(screen-lg) {
+                color: var(--color-white);
                 transition: color .2s;
               }
             }
@@ -278,7 +278,7 @@
       }
 
       &-link {
-        color: $brand-primary;
+        color: var(--color-brand-primary);
       }
 
       .moreLinks > .nav-link {
@@ -307,7 +307,7 @@
       padding: 0;
       flex-wrap: wrap;
 
-      @include media-breakpoint-up(lg) {
+      @include media-query(screen-lg) {
         flex-wrap: nowrap;
       }
     }
@@ -318,11 +318,11 @@
     font-weight: 200;
     line-height: 20px;
     padding: 10px 15px;
-    border-bottom: 1px solid $ox-header-border;
+    //border-bottom: 1px solid $ox-header-border;
     display: block;
     width: 100%;
 
-    @include media-breakpoint-up(lg) {
+    @include media-query(screen-lg) {
       padding: 10px 0.5rem;
       border-bottom: 0;
       display: inline-block;

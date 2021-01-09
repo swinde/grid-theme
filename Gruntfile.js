@@ -81,6 +81,7 @@ module.exports = function (grunt) {
 					'<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
 					'<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js',
 					'<%= project.dev %>build/js/main.js',
+					'<%= project.dev %>build/js/side.js',
 					'<%= project.dev %>build/js/pages/compare.js',
 					'<%= project.dev %>build/js/pages/details.js',
 					'<%= project.dev %>build/js/pages/review.js',
@@ -151,7 +152,7 @@ module.exports = function (grunt) {
 					expand: true,
 					src: '*',
 					cwd: '<%= project.dev %>/node_modules/@fortawesome/fontawesome-free/webfonts/',
-					dest: '<%= project.out %><%= project.theme %>/src/fonts/'
+					dest: '<%= project.out %><%= project.theme %>/src/webfonts/'
 				},
 				{
 					expand: true,

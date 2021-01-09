@@ -19,15 +19,10 @@ body {
 [id="wrapper"] {
   background: var(--wrapper-background);
   padding: 0;
-  @include media-breakpoint-up(lg) {
+  @include media-query(screen-lg) {
 
   }
-  .header, .content, .footer{
-    padding-left: var(--grid__gutter);
-    padding-right: var(--grid__gutter);
-    background: var(--header-color-background);
-    color: var(--header-color-text);
-  }
+
 }
 
 
@@ -65,7 +60,7 @@ body {
   margin-bottom: 30px;
 
   &-title {
-    font-size: $h4-font-size;
+    //font-size: $headlinesh4;
     margin: 0;
   }
 
@@ -75,14 +70,14 @@ body {
 }
 
 .btn-tertiary {
-  @include button-variant($white, $gray-400)
+  //@include button-variant($white, $gray-400)
 }
 
 .btn-warning {
-  color: $white;
+  color: var(--color-white);
 
   &:hover {
-    color: darken($white, .5);
+    //color: darken(var(--color-white), .5);
   }
 }
 
@@ -94,16 +89,66 @@ body {
 .btn {
   &-outline {
     &-dark {
-      color: $gray-800;
+      //color: $gray-800;
       background-color: transparent;
       background-image: none;
-      border-color: $gray-300;
+      //border-color: $gray-300;
     }
   }
 }
 span.badge:empty {
   display:none !important;
 }
-.menue{
-  background-color: $gray-400;
+.menu{
+  //background-color: $gray-400;
+}
+/* Main */
+/*[id="main"] {
+  > .inner {
+    padding: 0 6em 0.1em 6em;
+    margin: 0 auto;
+    max-width: 110em;
+
+    > section {
+      padding: 6em 0 4em 0;
+      border-top: solid 2px rgba(210, 215, 217, 0.75);
+
+      &:first-of-type {
+        border-top: 0 !important;
+      }
+    }
+  }
+}*/
+
+/*@media screen and (max-width: 1680px) {
+  [id="main"] > .inner {
+    padding: 0 5em 0.1em 5em;
+
+    > section {
+      padding: 5em 0 3em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  [id="main"] > .inner {
+    padding: 0 4em 0.1em 4em;
+
+    > section {
+      padding: 4em 0 2em 0;
+    }
+  }
+}
+
+@media screen and (max-width: 736px) {
+  [id="main"] > .inner {
+    padding: 0 2em 0.1em 2em;
+
+    > section {
+      padding: 3em 0 1em 0;
+    }
+  }
+}*/
+.breadcrumb{
+  @include make-row()
 }

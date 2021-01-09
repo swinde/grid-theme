@@ -3,30 +3,18 @@
         [{include file="rdfa/rdfa.tpl"}]
     [{/if}]
     [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-    <section class="navigation">
 
-        [{block name="sidebar_categoriestree"}]
-        <div class="categorytree">
-            <section>
-                <div class="page-header h3">
-                    [{oxmultilang ident="CATEGORIES"}]
-                </div>
-                [{oxid_include_widget cl="oxwCategoryTree" cnid=$oView->getCategoryId() sWidgetType="header" _parent=$oView->getClassName() nocookie=1}]
-            </section>
-        </div>
+    <div id="main">
+        <div class="inner">
+            <!--Header-->
+            <header class="header">
+                [{block name="layout_header"}]
+                [{include file="layout/header.tpl"}]
+                [{/block}]
+            </header>
 
-        [{/block}]
-    </section>
-    <section class="main">
-        <!--Header-->
-        <header class="header">
-            [{block name="layout_header"}]
-            [{include file="layout/header.tpl"}]
-            [{/block}]
-        </header>
+            <div id="content">
 
-        <div id="content">
-            <div class="inner">
                 [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
                 [{include file="widget/promoslider.tpl"}]
                 [{/if}]
@@ -45,15 +33,24 @@
                 [{/foreach}]
                 [{/block}]
             </div>
+            <div class="footer">
+                <footer >
+                    [{include file="layout/footer.tpl"}]
+                    [{block name="layout_init_social"}][{/block}]
+                </footer>
+            </div>
 
         </div>
-    </section>
-    <section class="footer">
-        <footer >
-            [{include file="layout/footer.tpl"}]
-            [{block name="layout_init_social"}][{/block}]
-        </footer>
-    </section>
+    </div>
+    [{*<div id="sidebar">
+        <div class="inner">
+            [{block name="layout_sidebar"}]
+                [{include file="layout/sidebar.tpl"}]
+            [{/block}]
+        </div>
+        *}][{*<a href="#sidebar" class="toggle">Toggle</a>*}][{*
+    </div>*}]
+
     <i class="fa fa-chevron-circle-up icon-4x" id="jumptotop"></i>
 [{/capture}]
 [{include file="layout/base.tpl"}]

@@ -7,17 +7,9 @@
         [{/if}]
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
         [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
-        [{block name="dd_widget_header_categorylist_navbar_header"}]
-        <button data-trigger="#navbar_main" class="d-lg-none btn btn-warning btn-offcanvas" type="button">Menü <i class="fas fa-bars"></i></button>
-        [{/block}]
-        <nav id="navbar_main" class="nav nav-bar mobile-offcanvas " role="navigation">
+        <nav id="menu" class="nav nav--main nav--horizontal nav--right nav--mobile " role="navigation">
             [{block name="dd_widget_header_categorylist_navbar"}]
-                <div class="offcanvas-header">
-                    <div>[{include file="widget/header/search.tpl"}]</div>
-                    <button class="btn btn-danger btn-close float-right"> &times Close </button>
-                    <h3 class="py-2">[{oxmultilang ident="CATEGORIES"}]</h3>
-                </div>
-                <ul id="navigation" class="navbar-nav nav">
+                <ul id="navigation" class="level_1">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
                             [{if $oViewConf->getViewThemeParam('blHomeLink')}]
                                 <li class="nav-item[{if $homeSelected == 'true'}] active[{/if}]">
@@ -39,7 +31,7 @@
                                         </a>
 
                                         [{if $ocat->getSubCats()}]
-                                            <ul class="dropdown-menu">
+                                            <ul class="level_2">
                                                 [{foreach from=$ocat->getSubCats() item="osubcat" key="subcatkey" name="SubCat"}]
                                                     [{if $osubcat->getIsVisible()}]
                                                         [{foreach from=$osubcat->getContentCats() item=ocont name=MoreCms}]

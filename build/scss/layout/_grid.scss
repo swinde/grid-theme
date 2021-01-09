@@ -5,50 +5,72 @@
   --grid__gutter:           1rem;
   --grid__gutter--half:     calc(var(--grid__gutter) / 2);
 
-  @include media-breakpoint-up(sm) {
+  @include media-query(screen-sm) {
     --grid__gutter:         1.875rem;
   }
 }
-[id="wrapper"]{
-  display: grid;
-  grid-template-columns: repeat(var(--grid__columns),1fr);
-  grid-gap: var(--grid__gutter);
-  grid-auto-columns: 1fr;
 
-}
-section{
-  &.navigation{
-    grid-column: 1/-1;
-    @include media-breakpoint-up(md) {
+[id="sidebar"]{
+    //grid-column: 1/-1;
+    @include media-query(screen-md) {
 
     }
-    @include media-breakpoint-up(lg) {
-      grid-column: span 3/ span 3;
+    @include media-query(screen-lg) {
+      grid-column-start:1;
+      grid-column-end:4;
+      grid-row-start:1;
+      grid-row-end:2;
+      &.inactive{
+        height: 0;
+      }
     }
-    @include media-breakpoint-up(xl) {
+    @include media-query(screen-lg) {
       grid-column: span 2/ span 2;
     }
-  }
-  &.main{
-    grid-column: 1/-1;
-    @include media-breakpoint-up(md) {
 
+  }
+
+[id="main"]{
+    grid-column: 1/-1;
+
+    @include media-query(screen-md) {
+      grid-column-start: 4;
+      grid-column-end: 13;
+      grid-row-start: 1;
+      grid-row-end: 2;
+      &.main--full{
+        grid-column-start: 1;
+        grid-column-end: 13;
+        grid-row-start: 1;
+        grid-row-end: 2;
+      }
     }
-    @include media-breakpoint-up(lg) {
-      grid-column: span 9/ span 9;
+  @include media-query(screen-lg) {
+    grid-column-start: 4;
+    grid-column-end: 13;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    &.main--full{
+      grid-column-start: 1;
+      grid-column-end: 13;
+      grid-row-start: 1;
+      grid-row-end: 2;
     }
-    @include media-breakpoint-up(xl) {
+  }
+    @include media-query(screen-lg) {
       grid-column: span 10/ span 10;
     }
-  }
-  &.footer{
-    grid-column: 1/-1;
-  }
-}
 
-/*.header {
+  }
 
-  @include media-breakpoint-up(xs) {
+  .footer{
+    //grid-column: 1/-1;
+  }
+
+
+.header {
+
+  @include media-query(screen-xs) {
     .btn-offcanvas{
       grid-column-start: 1;
       grid-column-end: 12;
@@ -57,7 +79,7 @@ section{
       margin-bottom: var(--base-spacing-unit--xs);
     }
   }
-  @include media-breakpoint-up(lg) {
+  @include media-query(screen-lg) {
     .logo-col{
       grid-column-start:1;
       grid-column-end:4;
@@ -80,4 +102,4 @@ section{
     }
   }
 
-}*/
+}

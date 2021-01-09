@@ -7,7 +7,7 @@
     [{assign var="force_sid" value=$oView->getSidForWidget()}]
     [{/if}]
     <div class="inner">
-            <div class="row mb-4">
+            <div class=" mb-4">
                 <div class="col-12 col-lg-8">
                     <div class="row">
                         [{block name="dd_footer_servicelist"}]
@@ -60,7 +60,7 @@
                     <div class="row">
                         <div class="col-12 mx-auto mx-lg-0">
 
-                            [{*if $oView->showNewsletter()}]
+                            [{if $oView->showNewsletter()}]
                             <section class="footer-box footer-box-newsletter">
                                 <div class="h4 footer-box-title">[{oxmultilang ident="NEWSLETTER"}]</div>
                                 <div class="footer-box-content">
@@ -70,7 +70,7 @@
                                     [{/block}]
                                 </div>
                             </section>
-                            [{/if*}]
+                            [{/if}]
                             [{block name="footer_social"}][{/block}]
                             [{ oxcontent ident=bezahlarten_info }]
                         </div>

@@ -1,7 +1,8 @@
 // Wave Theme
 @import 'variables';
 
-@import '../../node_modules/bootstrap/scss/bootstrap';
+@import "mixins/general";
+@import "mixins/responsive";
 
 // Including basic 3rd party libs
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
@@ -9,6 +10,25 @@
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
 @import '../vendor/font-google/scss/font-google';
+
+@import "../vendor/nutshell/scss/generic/normalize";
+@import "../vendor/nutshell/scss/generic/contao-reset";
+@import "../vendor/nutshell/scss/generic/box-sizing";
+
+// BASE
+@import "base/shared";
+@import "base/page";
+@import "base/type";
+@import "base/grid";
+@import "base/layout";
+
+@import "components/forms";
+@import "components/links";
+@import "components/navs";
+
+@import "trumps/browser-support";
+@import "trumps/helper";
+@import "trumps/print";
 
 @import "../vendor/photoswipe/scss/photoswipe";
 
@@ -22,18 +42,20 @@
 @import 'layout/sidebar';
 @import 'layout/grid';
 
-@import 'form/fieldset/user_shipping';
-@import 'form/wishlist_publish';
-@import 'form/recommendation_add';
 
-@import 'page/details/details';
+/*@import 'form/fieldset/user_shipping';
+@import 'form/wishlist_publish';
+@import 'form/recommendation_add';*/
+
+/*@import 'page/details/details';
 @import 'page/checkout/order';
 @import 'page/compare/compare';
 @import 'page/account/inc/account_menu';
 @import 'page/list/list';
-@import 'page/err-404/err-404';
+@import 'page/err-404/err-404';*/
 
 
+/*
 
 @import 'widget/manufacturersslider';
 @import 'widget/promoslider';
@@ -46,4 +68,4 @@
 @import 'widget/minibasket/minibasket';
 @import 'widget/sidebar/recommendation';
 
-@import 'components/togglemenu';
+@import 'components/togglemenu';*/

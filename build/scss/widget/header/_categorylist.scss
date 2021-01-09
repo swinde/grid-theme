@@ -2,7 +2,7 @@
 
   font-size: larger;
   flex-direction: column !important;
-  @include media-breakpoint-up(lg){
+  @include media-query(screen-lg){
 
   }
 }*/
