@@ -65,7 +65,7 @@
       }
 
       #toBasket:disabled {
-        color: transparentize($white, .65);
+        color: transparentize(var(--color-white), .65);
         cursor: not-allowed;
           min-width: 12em;
       }
@@ -80,7 +80,7 @@
         height: 100%;
         text-align: center;
         background: inherit;
-        color: $white;
+        color: var(--color-white);
         padding: inherit;
         opacity: 0;
         transition: opacity .1s;

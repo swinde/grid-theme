@@ -24,11 +24,13 @@
 
 // PUT YOUR STYLES HERE
 body {
-  font-style: normal;
-  font-weight: normal;
-    font-family: var(--base-font-family);
-  color: var(--color-text);
-  }
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+  line-height: var(--base-line-height);
+  color: var(--color-gray);
+  padding-top: 0;
+
+}
 h1, h2, h3, h4, h5, h6 {
   margin-top: 1em;
   font-family: var(--base-font-family-2);
@@ -49,17 +51,22 @@ ul, ol{
   list-style: none;
  }
 
-/*[id="wrapper"] {
-  min-height: 100vh;
-  display: grid;
-  grid-template-rows: -webkit-min-content auto -webkit-min-content;
-  grid-template-rows: min-content auto min-content;
-  grid-template-columns: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background: hsl(0, 0%, 98%);
+[id="wrapper"] {
   background: var(--wrapper-background);
-}*/
+  padding-left: var(--grid__gutter--half);
+  padding-right: var(--grid__gutter--half);
+  @include media-query(screen-xl) {
+    //@include wrapper-max;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--grid__gutter);
+    padding-right: var(--grid__gutter);
+    padding-top: var(--base-spacing-unit--lg);
+    padding-bottom: var(--base-spacing-unit--lg);
+    position: relative;
+  }
+}
 [id="header"]{
   //background-image: url($image-bg-path + "body-bg.jpg");
   //background-position: left top;

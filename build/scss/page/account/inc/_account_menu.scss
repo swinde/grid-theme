@@ -4,9 +4,9 @@
 
     &-item {
       &.active {
-        color: $white;
+        color: var(--color-white);
         &:hover, &:focus {
-          color: $white;
+          color: var(--color-white);
           background-color: $primary;
         }
       }

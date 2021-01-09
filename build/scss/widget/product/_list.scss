@@ -56,7 +56,7 @@
     &.active,
     &.selected,
     &:hover {
-      background-color: $brand-primary;
+      background-color: var(--color-brand-primary);
     }
   }
 
@@ -67,7 +67,7 @@
     .active &,
     .selected &,
     &:hover {
-      color: $white;
+      color: var(--color-white);
       text-decoration: none;
     }
   }

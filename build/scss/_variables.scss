@@ -83,9 +83,24 @@
 
   --header-color-text--invert:#FFFFFF;
 }
-
+//Bootstrap Colors
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
 // PUT YOUR CUSTOM-PROPERTIES HERE
 $image-path:          "/files/theme/src/img/";
 $image-bg-path:       "/files/theme/src/img/bg/";
 $primary: var(--color-brand-primary);
 $secondary: var(--color-brand-primary);
+// Sozial Icons
+$ox-footer-color-facebook:              #428BCA !default;
+$ox-footer-color-google-plus:           #d73d32 !default;
+$ox-footer-color-twitter:               #1AB2E8 !default;
+$ox-footer-color-youtube:               #CC181E !default;
+$ox-footer-color-blog:                  #333333 !default;

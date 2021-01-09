@@ -19,7 +19,7 @@
 
   &-total {
     &-row {
-      background-color: $white;
+      background-color: var(--color-white);
       border-style: solid;
       border-color: $gray-400;
       border-width: 1px 0 0 1px;
@@ -67,7 +67,7 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          color: $white;
+          color: var(--color-white);
         }
       }
     }

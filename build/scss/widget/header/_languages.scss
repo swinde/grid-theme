@@ -7,10 +7,10 @@
         &.active,
         &.selected,
         &:hover {
-          background-color: $brand-primary;
+          background-color: var(--color-brand-primary);
 
           > .dropdown-link {
-            color: $white;
+            color: var(--color-white);
           }
         }
       }
@@ -22,7 +22,7 @@
         .active &,
         .selected &,
         &:hover {
-          color: $white;
+          color: var(--color-white);
           text-decoration: none;
         }
       }

@@ -282,6 +282,7 @@
     transition: max-height 0s, background 0.3s;
     text-align: left;
     background: var(--color-base-overlay-background);
+    color:var(--color-white);
     .level_1{
       li {
         -webkit-transform: translateY(-0.8125rem);
@@ -326,7 +327,7 @@
   white-space: nowrap;
   margin: 0;
   cursor: pointer;
-  color: var(--color-white);
+  color: var(--color-text);
   padding: calc(var(--base-spacing-unit--xs)/2) var(--base-spacing-unit--xs);
   line-height: 1.5;
 
