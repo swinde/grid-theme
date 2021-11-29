@@ -1,4 +1,4 @@
-
+@import "../../vendor/nutshell/scss/base/grid";
 // CSS-VARIABLES
 :root {
   --grid__columns:          12;
@@ -10,96 +10,49 @@
   }
 }
 
-[id="sidebar"]{
-    //grid-column: 1/-1;
-    @include media-query(screen-md) {
 
-    }
-    @include media-query(screen-lg) {
-      grid-column-start:1;
-      grid-column-end:4;
-      grid-row-start:1;
-      grid-row-end:2;
-      &.inactive{
-        height: 0;
-      }
-    }
-    @include media-query(screen-lg) {
-      grid-column: span 2/ span 2;
-    }
-
+//Erweiterung Grid Mobil
+.col{
+  &-1{
+    @include make-col(1);
   }
-
-[id="main"]{
-    grid-column: 1/-1;
-
-    @include media-query(screen-md) {
-      grid-column-start: 4;
-      grid-column-end: 13;
-      grid-row-start: 1;
-      grid-row-end: 2;
-      &.main--full{
-        grid-column-start: 1;
-        grid-column-end: 13;
-        grid-row-start: 1;
-        grid-row-end: 2;
-      }
-    }
-  @include media-query(screen-lg) {
-    grid-column-start: 4;
-    grid-column-end: 13;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    &.main--full{
-      grid-column-start: 1;
-      grid-column-end: 13;
-      grid-row-start: 1;
-      grid-row-end: 2;
-    }
+  &-2{
+    @include make-col(2);
   }
-    @include media-query(screen-lg) {
-      grid-column: span 10/ span 10;
-    }
-
+  &-3{
+    @include make-col(3);
   }
-
-  .footer{
-    //grid-column: 1/-1;
+  &-4{
+    @include make-col(4);
   }
-
-
-.header {
-
-  @include media-query(screen-xs) {
-    .btn-offcanvas{
-      grid-column-start: 1;
-      grid-column-end: 12;
-      grid-row-start: 4;
-      grid-row-end: 5;
-      margin-bottom: var(--base-spacing-unit--xs);
-    }
+  &-5{
+    @include make-col(5);
   }
-  @include media-query(screen-lg) {
-    .logo-col{
-      grid-column-start:1;
-      grid-column-end:4;
-      grid-row-start:1;
-      grid-row-end:2;
-    }
-    .menus-col{
-      grid-column-start: 9;
-      grid-column-end: 13;
-      grid-row-start: 1;
-      grid-row-end: 2;
-      align-self: center;
-    }
-    .search-col{
-      grid-column-start:5;
-      grid-column-end:9;
-      grid-row-start:1;
-      grid-row-end:2;
-      align-self: center;
-    }
+  &-6{
+    @include make-col(6);
   }
-
+  &-7{
+    @include make-col(7);
+  }
+  &-8{
+    @include make-col(8);
+  }
+  &-9{
+    @include make-col(9);
+  }
+  &-10{
+    @include make-col(10);
+  }
+  &-11{
+    @include make-col(11);
+  }
+  &-12{
+    @include make-col(12);
+  }
+}
+.offset-lg-3{
+  @extend .col-start-lg-4;
+}
+.col-lg-offset-2{
+  @extend .col-start-lg-3;
 }
