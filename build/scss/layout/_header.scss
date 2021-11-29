@@ -36,7 +36,7 @@
       display: block;
       margin: 0 auto;
       @include media-query(screen-xl) {
-        //font-size: calc(var(--base-font-size--xl) / 1rem * 1em); 
+        //font-size: calc(var(--base-font-size--xl) / 1rem * 1em);
         font-size: var(--base-font-size--xl);
       }
       @include media-query(screen-md) {
@@ -46,10 +46,10 @@
   }
 
   &-box {
-    //padding: var(--grid__gutter) 0 10px;
+    @include padding-default(var(--grid__gutter));
 
     @include media-query(screen-lg) {
-      //padding: var(--grid__gutter) 0;
+      @include padding-default(var(--grid__gutter));
     }
   }
   .menu {
@@ -155,7 +155,7 @@
 
     &-nav {
       margin: 0;
-      //border-top: 1px solid $ox-listfilter-border;
+      border-top: 1px solid $ox-listfilter-border;
 
       @include media-query(screen-lg) {
         margin: 0;
@@ -173,7 +173,7 @@
         font-weight: 200;
         line-height: 20px;
         padding: 10px 15px;
-        //border-bottom: 1px solid $ox-listfilter-border;
+        border-bottom: 1px solid $ox-listfilter-border;
 
         @include media-query(screen-lg) {
           border-bottom: 0;
@@ -206,7 +206,7 @@
               margin-left: inherit;
               margin-right: inherit;
               position: absolute;
-              background-color: var(--color-white);
+              background-color: $white;
               box-shadow: inherit;
               border: 1px solid rgba(0, 0, 0, 0.15);
               border-radius: 0.25rem;
@@ -318,7 +318,7 @@
     font-weight: 200;
     line-height: 20px;
     padding: 10px 15px;
-    //border-bottom: 1px solid $ox-header-border;
+    border-bottom: 1px solid $ox-header-border;
     display: block;
     width: 100%;
 
