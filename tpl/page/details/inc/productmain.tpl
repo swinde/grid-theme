@@ -50,7 +50,7 @@
 
 <div class="details-info" itemscope itemtype="http://schema.org/Product">
     <div class="row">
-        <div class="col-12 col-md-4 details-col-left">
+        <div class="col-12 col-md-5 col-lg-4 details-col-left">
             [{* article picture with zoom *}]
             [{block name="details_productmain_zoom"}]
                 [{oxscript include="js/libs/photoswipe.min.js" priority=8}]
@@ -96,10 +96,11 @@
             [{/block}]
 
             [{* article number *}]
+            [{if $oDetailsProduct->oxarticles__oxartnum->value}]
             [{block name="details_productmain_artnumber"}]
                 <span class="small text-muted">[{oxmultilang ident="ARTNUM" suffix="COLON"}] [{$oDetailsProduct->oxarticles__oxartnum->value}]</span>
             [{/block}]
-
+            [{/if}]
             [{* ratings *}]
             [{if $oView->ratingIsActive()}]
                 [{block name="details_productmain_ratings"}]
