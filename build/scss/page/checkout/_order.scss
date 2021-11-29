@@ -28,3 +28,10 @@
 .voucher-code {
   max-width: 250px;
 }
+#paymentMethodContainer .paymentMethodRow  img.paymentMethodIcon {
+  max-width: 100px;
+  max-height: 30px;
+}
+#paymentMethodContainer #Vorauskasse div.nameRow .methodIcon {
+  background-image: url("https://www.der-kaese.de/out/grid/img/icon-vorkasse-1-hell.png");
+}
