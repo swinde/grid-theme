@@ -11,12 +11,13 @@
 // General footer styles
 
 .footer {
+
   text-align: center;
   border-top: 2px solid $ox-footer-border;
   border-bottom: 2px solid $ox-footer-border;
   background-color: $ox-footer-bg;
   color: $ox-footer-color;
-  padding: var(--grid__gutter) 0;
+  @include padding-default(var(--grid__gutter));
 
   @include media-query(screen-md) {
     text-align: left;
@@ -39,7 +40,7 @@
     }
 
     &-facebook {
-      margin-top: $line-height-computed / 2;
+      margin-top: var(--base-line-height) / 2;
     }
   }
 
@@ -49,6 +50,7 @@
     &-list {
       padding-left: 0;
       list-style: none;
+      grid-gap: 0;
     }
 
     &-item {
@@ -117,6 +119,6 @@
 }
 
 .legal {
-  background-color: var(--color-white);
-  padding: var(--grid__gutter) 0;
+  background-color: $white;
+  //padding: $grid-gutter-width 0;
 }
