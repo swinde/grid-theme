@@ -5,7 +5,6 @@
 // *
 // * Lizenziert unter MIT OPEN SOURCE
 // *
-
 //
 // BASE/GRID
 // --------------------------------------------------
@@ -52,21 +51,11 @@
 .nav--right {
   justify-self: end;
 }
-.nav--main{
-  & > input{
-    display: none;
-  }
-  ul{
-    display: none;
-  }
-  input[type=checkbox]:checked ~ ul {
-    display: block
-  }
-}
+
 .nav--vertical{
   @include media-query(screen-lg) {
     ul {
-      padding-left: 0px;
+      padding-left: 0;
       list-style: none;
       display: flex;
       flex-direction: column;

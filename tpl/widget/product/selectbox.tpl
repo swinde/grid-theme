@@ -15,7 +15,7 @@
                         [{if $sFieldName == "sel"}]
                             [{oxmultilang ident="PLEASE_CHOOSE"}]
                         [{else}]
-                            [{$oSelectionList->getLabel()}] [{oxmultilang ident="CHOOSE_VARIANT"}]
+                          [{*doppelte Bezeichnung*}]  [{*$oSelectionList->getLabel()*}] [{oxmultilang ident="CHOOSE_VARIANT"}]
                         [{/if}]
                     </span>
                 [{/if}]

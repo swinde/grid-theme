@@ -135,6 +135,7 @@
 
         [{block name="base_style"}]
             [{oxstyle include="css/styles.min.css"}]
+            [{oxstyle include="css/test.css"}]
         [{/block}]
 
         [{block name="base_fonts"}]
@@ -207,10 +208,12 @@
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
 
     [{block name="theme_svg_icons"}][{/block}]
-    <div id="wrapper">
+    <div id="page">
+
             [{foreach from=$oxidBlock_pageBody item="_block"}]
             [{$_block}]
             [{/foreach}]
+
     </div>
 
     [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]
@@ -220,9 +223,7 @@
     [{block name="base_js"}]
         [{include file="i18n/js_vars.tpl"}]
         [{oxscript include="js/script.min.js" priority=1}]
-        [{oxscript include="js/pages/breakpoints.min.js" priority=1}]
-        [{oxscript include="js/pages/browser.min.js" priority=1}]
-        [{oxscript include="js/site.js" priority=1}]
+        [{oxscript include="js/menu_toggle.js" priority=1}]
     [{/block}]
 
     [{if $oViewConf->isTplBlocksDebugMode()}]

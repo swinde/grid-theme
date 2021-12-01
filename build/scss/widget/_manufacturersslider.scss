@@ -1,8 +1,11 @@
+:root{
+  $ox-start-manufacturerslider-bg:#f2f2f2;
+}
 .manufacturer-slider {
-  border-top: 2px solid $ox-start-manufacturerslider-border;
-  border-bottom: 2px solid $ox-start-manufacturerslider-border;
+  border-top: 2px solid var(--base-border-color);
+  border-bottom: 2px solid var(--base-border-color);
   background-color: $ox-start-manufacturerslider-bg;
-  padding: $line-height-computed * 2 0;
+  padding: var(--base-spacing-unit) 0;
   margin-bottom: 20px;
 
   .flexslider {

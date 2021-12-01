@@ -1,6 +1,6 @@
 .form-horizontal {
   .form-group {
-    @include make-row();
+    @include make-row(12);
 
     .control-label {
       @include media-query(screen-md){

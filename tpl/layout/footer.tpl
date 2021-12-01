@@ -7,12 +7,12 @@
     [{assign var="force_sid" value=$oView->getSidForWidget()}]
     [{/if}]
     <div class="inner">
-            <div class=" mb-4">
+            <div class="row mb-4">
                 <div class="col-12 col-lg-8">
                     <div class="row">
                         [{block name="dd_footer_servicelist"}]
                         <section
-                                class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-3[{else}]col-lg-6[{/if}] footer-box footer-box-service">
+                                class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-4[{else}]col-lg-6[{/if}] footer-box footer-box-service">
                             <div class="h4 footer-box-title">[{oxmultilang ident="SERVICES"}]</div>
                             <div class="footer-box-content">
                                 [{block name="dd_footer_servicelist_inner"}]
@@ -23,7 +23,7 @@
                         [{/block}]
                         [{block name="dd_footer_information"}]
                         <section
-                                class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-3[{else}]col-lg-6[{/if}] footer-box footer-box-information">
+                                class="col-12 [{if $blShowFullFooter}]col-md-6 col-lg-4[{else}]col-lg-6[{/if}] footer-box footer-box-information">
                             <div class="h4 footer-box-title">[{oxmultilang ident="INFORMATION"}]</div>
                             <div class="footer-box-content">
                                 [{block name="dd_footer_information_inner"}]
@@ -33,18 +33,18 @@
                         </section>
                         [{/block}]
                         [{if $blShowFullFooter}]
-                        [{block name="sw_footer_sw_info"}]
+                        [{*[{block name="dd_footer_manufacturerlist"}]
                         <section class="col-12 col-md-6 col-lg-3 footer-box footer-box-manufacturers">
-                            <div class="h4 footer-box-title">[{oxmultilang ident="OUR_INFOS"}]</div>
+                            <div class="h4 footer-box-title">[{oxmultilang ident="OUR_BRANDS"}]</div>
                             <div class="footer-box-content">
-                                [{block name="sw_footer_sw_info_inner"}]
-                                [{include file="widget/footer/sw_info.tpl"}]
+                                [{block name="dd_footer_manufacturerlist_inner"}]
+                                [{oxid_include_widget cl="oxwManufacturerList" _parent=$oView->getClassName() noscript=1 nocookie=1}]
                                 [{/block}]
                             </div>
                         </section>
-                        [{/block}]
+                        [{/block}]*}]
                         [{block name="dd_footer_categorytree"}]
-                        <section class="col-12 col-md-6 col-lg-3 footer-box footer-box-categories">
+                        <section class="col-12 col-md-6 col-lg-4 footer-box footer-box-categories">
                             <div class="h4 footer-box-title">[{oxmultilang ident="CATEGORIES"}]</div>
                             <div class="footer-box-content">
                                 [{block name="dd_footer_categorytree_inner"}]
@@ -59,7 +59,6 @@
                 <div class="col-12 col-lg-4">
                     <div class="row">
                         <div class="col-12 mx-auto mx-lg-0">
-
                             [{if $oView->showNewsletter()}]
                             <section class="footer-box footer-box-newsletter">
                                 <div class="h4 footer-box-title">[{oxmultilang ident="NEWSLETTER"}]</div>
@@ -71,8 +70,9 @@
                                 </div>
                             </section>
                             [{/if}]
+
                             [{block name="footer_social"}][{/block}]
-                            [{ oxcontent ident=bezahlarten_info }]
+
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@
                             <a target="_blank" class="social-links-link"
                                rel="noopener"
                                href="[{$oViewConf->getViewThemeParam('sGooglePlusUrl')}]">
-                                <i class="fab fa-google-plus-square"></i> <span>Google+</span>
+                                <i class="fab fa-instagram"></i> <span>Instagram</span>
                             </a>
                         </li>
                         [{/if}]

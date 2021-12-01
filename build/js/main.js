@@ -271,7 +271,7 @@ $(function () {
             }
         };
         Wave.initEvents();
-/*
+
         function reRenderMainNav() {
             var $oMainNav = $('#mainnav').find('.navbar-collapse'),
                 $oNavList = $('#navigation'),
@@ -338,7 +338,7 @@ $(function () {
         reRenderMainNav();
         $window.resize(function () {
             reRenderMainNav();
-        });*/
+        });
 
         /* *********************************
          * Warenkorb
@@ -434,11 +434,3 @@ $(window).on('load', function () {
         }, 500);
     }
 );
-
-jQuery(function ($) {
-    $('.nav-toggler__button').on('click', function(e) {
-        e.preventDefault();
-        $('.nav--mobile').toggleClass('nav--mobile--active');
-        $('html').toggleClass('html--fixed');
-    });
-});

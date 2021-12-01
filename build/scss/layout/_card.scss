@@ -1,0 +1,17 @@
+.card-deck {
+  @include make-row;
+  position: relative;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  .card{
+    @include make-col(12);
+
+    @include media-query(screen-lg) {
+      @include make-col(4);
+    }
+  }
+}

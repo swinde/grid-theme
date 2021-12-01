@@ -14,7 +14,7 @@
       &:not(.show) {
 
         @include media-query(screen-md){
-          display: flex;
+
         }
       }
     }

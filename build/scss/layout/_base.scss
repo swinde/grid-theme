@@ -73,14 +73,14 @@ body {
 }
 
 .btn-tertiary {
-  //@include button-variant($white, $gray-400)
+  //@include button-variant(var(--color-white), $gray-400)
 }
 
 .btn-warning {
   color: var(--color-white);
 
   &:hover {
-    color: darken($white, .5);
+    //color: darken(var(--color-white), .5);
   }
 }
 
@@ -105,3 +105,4 @@ span.badge:empty {
 .menue{
   background-color: $gray-400;
 }
+ul li a, ol li a{text-decoration: none}

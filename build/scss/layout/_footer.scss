@@ -13,8 +13,8 @@
 .footer {
 
   text-align: center;
-  border-top: 2px solid $ox-footer-border;
-  border-bottom: 2px solid $ox-footer-border;
+  border-top: 2px solid var(--base-border-color);
+  border-bottom: 2px solid var(--base-border-color);
   background-color: $ox-footer-bg;
   color: $ox-footer-color;
   @include padding-default(var(--grid__gutter));
@@ -119,6 +119,6 @@
 }
 
 .legal {
-  background-color: $white;
+  background-color: var(--color-white);
   //padding: $grid-gutter-width 0;
 }

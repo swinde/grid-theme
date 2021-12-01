@@ -1,5 +1,5 @@
 [{block name="checkout_steps_main"}]
-    <ol class="checkoutSteps checkout-steps row">
+    <ol class="checkoutSteps checkout-steps">
         [{if $oxcmp_basket->getProductsCount()}]
             [{assign var=showStepLinks value=true}]
         [{/if}]

@@ -79,3 +79,14 @@
     }
   }
 }
+.checkoutCollumns{
+  @include make-row;
+  .card{
+
+    @include make-col(12);
+
+    @include media-query(screen-sm) {
+      @include make-col(6);
+    }
+  }
+}

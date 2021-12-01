@@ -18,7 +18,7 @@
         [{oxifcontent ident="oxorderinfo" object="oCont"}]
             <li><a href="[{$oCont->getLink()}]">[{$oCont->oxcontents__oxtitle->value}]</a></li>
         [{/oxifcontent}]
-        [{oxifcontent ident="oxcredits" object=""}]
+        [{oxifcontent ident="oxcredits" object="oCont"}]
             <li><a href="[{$oCont->getLink()}]">[{$oCont->oxcontents__oxtitle->value}]</a></li>
         [{/oxifcontent}]
         [{if $oViewConf->getViewThemeParam('blFooterShowNewsletter')}]
@@ -27,6 +27,5 @@
         [{if $oViewConf->getViewThemeParam('blFooterShowNews')}]
             <li><a href="[{oxgetseourl ident=$oViewConf->getSelfLink()|cat:"cl=news"}]">[{oxmultilang ident="NEWS"}]</a></li>
         [{/if}]
-
     </ul>
 [{/block}]
