@@ -35,7 +35,7 @@
 
 .paypalHelpBox {
   @extend .alert;
-  @extend .alert-info;
+  //@extend .alert-info;
   display: none;
   position: absolute;
 }

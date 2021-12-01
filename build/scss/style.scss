@@ -1,23 +1,25 @@
 // Wave Theme
 @import 'variables';
-
+@import 'normalize';
 // Custom.scss
 // Option B: Include parts of Bootstrap
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../../node_modules/bootstrap/scss/functions";
 
 // 2. Include any default variable overrides here
 
 // 3. Include remainder of required Bootstrap stylesheets
-/*@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 // Optional Bootstrap components here
 @import "../../node_modules/bootstrap/scss/root";
 @import "../../node_modules/bootstrap/scss/reboot";
 @import "../../node_modules/bootstrap/scss/type";
+@import "../../node_modules/bootstrap/scss/buttons";
 @import "../../node_modules/bootstrap/scss/dropdown";
-@import "../../node_modules/bootstrap/scss/button-group";*/
+@import "../../node_modules/bootstrap/scss/button-group";
+@import "../../node_modules/bootstrap/scss/forms";
 
 // etc
 // MIXINS
@@ -31,7 +33,7 @@
 @import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
 @import '../vendor/font-google/scss/font-google';
 
-@import "../vendor/nutshell/scss/generic/normalize";
+//@import "../vendor/nutshell/scss/generic/normalize";
 @import "../vendor/nutshell/scss/generic/contao-reset";
 @import "../vendor/nutshell/scss/generic/box-sizing";
 
