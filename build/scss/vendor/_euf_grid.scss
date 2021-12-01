@@ -1484,3 +1484,15 @@ html {
 .row-span-12 {
   grid-row: span 12 / span 12;
 }
+@media screen and (min-width: 68.75em) {
+.d{
+  &-{
+    &lg, &xl{
+      &-none{
+        display: none;
+      }
+
+    }
+  }
+
+}}

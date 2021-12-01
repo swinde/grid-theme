@@ -4,10 +4,12 @@
     [{/if}]
     [{assign var="showNavHoriz" value=$oViewConf->getViewThemeParam('sw_showNavHoriz')}]
         <!--Header-->
-        <header class="row header">
-            [{block name="layout_header"}]
-            [{include file="layout/header.tpl"}]
-            [{/block}]
+        <header class="header">
+            <div class="row inner">
+                [{block name="layout_header"}]
+                    [{include file="layout/header.tpl"}]
+                [{/block}]
+            </div>
         </header>
         [{*Umschalter 1 Spalten oder 2 Spalten*}]
         [{if $showNavHoriz}]

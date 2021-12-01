@@ -1,0 +1,26 @@
+body.cl-start {
+  background-image: url(../../img/backgrounds/mittelsachsenshop_hg_mobil.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
+  padding-top: 0;
+  @include media-query(screen-sm) {
+    background-image: url(../../img/backgrounds/mittelsachsenshop_hg2.jpg);
+  }
+}
+.header {
+  background-color: #f8f9fa;
+  margin: 0 -15px;
+  border-bottom: 2px solid #b2c669;
+  padding-bottom: 2rem;
+  @include media-query(screen-sm) {
+    .inner{
+      margin: 0 15rem;
+    }
+
+  }
+}
+.categorytree {
+  background-color: #f5f5f5;
+  border: 1px solid #b2c669;
+}

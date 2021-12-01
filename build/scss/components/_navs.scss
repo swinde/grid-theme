@@ -540,3 +540,12 @@
     }
   }
 }
+//Offvanvas
+.offcanvas-header {
+  color:var(--color-white);
+  @include media-query(screen-lg) {
+    position: absolute;
+    left: -100vw;
+  }
+
+}
