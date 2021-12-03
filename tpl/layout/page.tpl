@@ -13,7 +13,7 @@
         </header>
         [{*Umschalter 1 Spalten oder 2 Spalten*}]
         [{if $showNavHoriz}]
-        <div class="content">
+        <article class="content">
             [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
             [{include file="widget/promoslider.tpl"}]
             [{/if}]
@@ -31,14 +31,14 @@
             [{$_block}]
             [{/foreach}]
             [{/block}]
-        </div>
+        </article>
         [{else}]
 
-        <div class="row">
-            <div class="col-12 col-md-3 col-lg-3 sidebar">
+        <main class="row">
+            <aside class="col-12 col-md-3 col-lg-3 sidebar">
                 [{include file="layout/leftcol.tpl"}]
-            </div>
-            <div id="content" class="col-12 col-md-9 col-lg-9 content">
+            </aside>
+            <article id="content" class="col-12 col-md-9 col-lg-9 content">
                 <div class="inner">
                     [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
                     [{include file="widget/promoslider.tpl"}]
@@ -58,9 +58,8 @@
                     [{/foreach}]
                     [{/block}]
                 </div>
-
-            </div>
-        </div>
+            </article>
+        </main>
         [{/if}]
 
         <footer class="footer">

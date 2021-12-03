@@ -19,7 +19,15 @@
   }
 }
 
-.cl-account .card {
-  height: auto;
-  margin-bottom: var(--grid__gutter);
+// Hauptnavigation wird ausgeblendet
+.cl-account, [class^="cl-account_"], .cl-compare {
+  &.is-logged-in {
+    .categorytree {
+      visibility: hidden;
+    }
+  }
+  .card {
+     height: auto;
+     margin-bottom: var(--grid__gutter);
+   }
 }
