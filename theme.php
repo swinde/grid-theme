@@ -31,7 +31,7 @@ $aTheme = array(
     'title'       => 'Grid',
     'description' => 'Grid theme is based on the OXID Wave Theme.',
     'thumbnail'   => 'theme.jpg',
-    'version'     => '1.4.4',
+    'version'     => '1.4.6',
     'author'      => '<a href="http://www.oxid-esales.com" title="OXID eSales AG">OXID eSales AG</a>',
     'settings'    => array(
         array(
