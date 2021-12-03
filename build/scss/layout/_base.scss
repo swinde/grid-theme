@@ -28,7 +28,7 @@ body {
 }
 
 .inner{
- //padding: 0 1rem;
+  padding: 0 1rem;
 }
 .img-thumbnail {
   border: none;
@@ -90,6 +90,9 @@ body {
   width: 0;
 }
 .btn {
+  &-primary{
+    color:var(--color-white)
+  }
   &-outline {
     &-dark {
       color: $gray-800;
@@ -98,6 +101,7 @@ body {
       border-color: $gray-300;
     }
   }
+
 }
 span.badge:empty {
   display:none !important;
@@ -105,4 +109,4 @@ span.badge:empty {
 .menue{
   background-color: $gray-400;
 }
-ul li a, ol li a{text-decoration: none}
+a {text-decoration: none}

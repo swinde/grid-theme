@@ -523,7 +523,6 @@
   @include media-query(screen-menu) {
     flex-direction: row;
   }
-
   li {
     @include media-query(screen-menu) {
       padding-right: var(--base-spacing-unit);
