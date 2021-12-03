@@ -22,6 +22,8 @@
 
 $aLang = array(
     'charset'                                       => 'UTF-8',
+    'SHOP_THEME_GROUP_layout_grid'                  => 'Grid Layout',
+    'SHOP_THEME_sw_showNavHoriz'                    => 'Hauptmenü horizontal aktive',
 
     'SHOP_THEME_GROUP_images'                       => 'Bilder',
     'SHOP_THEME_GROUP_features'                     => 'Funktionen',

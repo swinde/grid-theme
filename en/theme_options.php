@@ -23,6 +23,8 @@ $sLangName  = 'English';
 
 $aLang = array(
     'charset'                                       => 'UTF-8',
+    'SHOP_THEME_GROUP_layout_grid'                  => 'Grid layout ',
+    'SHOP_THEME_sw_showNavHoriz'                    => 'Main menu horizontally active ',
 
     'SHOP_THEME_GROUP_images'                       => 'Images',
     'SHOP_THEME_GROUP_features'                     => 'Features',
