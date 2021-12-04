@@ -10,13 +10,11 @@
             [{include file="layout/inc/toggle_button.tpl"}]
         [{/if}]
         <nav id="navbar_main" class="mobile-offcanvas nav nav--main [{if $showNavHoriz}]nav--horizontal [{else}]nav--vertical[{/if}] nav--mobile col-12 block" role="navigation">
-
             <div class="offcanvas-header">
-                [{*if $showNavHoriz != 'true'*}]
+                [{if $showNavHoriz != 'true'}]
                     <h3 class="d-lg-none py-2 offcanvas-title">[{oxmultilang ident="CATEGORIES"}]</h3>
-                [{*/if*}]
+                [{/if}]
                 <button class="nav-toggler__button btn btn-danger btn-close float-right d-lg-none"> &times Close </button>
-
             </div>
 
             [{block name="dd_widget_header_categorylist_navbar"}]

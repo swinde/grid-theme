@@ -35,10 +35,10 @@
         [{else}]
 
         <main class="row">
-            <aside class="col-12 col-md-3 col-lg-3 sidebar">
+            <aside class="col-md-3 col-lg-2 sidebar">
                 [{include file="layout/leftcol.tpl"}]
             </aside>
-            <article id="content" class="col-12 col-md-9 col-lg-9 content">
+            <article id="content" class="col-md-9 col-lg-10 content">
                 <div class="inner">
                     [{if $oView->getClassName()=='start' && $oView->getBanners() && !empty($oView->getBanners())}]
                     [{include file="widget/promoslider.tpl"}]
