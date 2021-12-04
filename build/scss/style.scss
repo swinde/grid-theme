@@ -1,5 +1,6 @@
 // Wave Theme
 @import 'variables';
+
 @import 'normalize';
 // Custom.scss
 // Option B: Include parts of Bootstrap
@@ -21,6 +22,7 @@
 @import "../../node_modules/bootstrap/scss/button-group";
 @import "../../node_modules/bootstrap/scss/forms";
 @import "../../node_modules/bootstrap/scss/offcanvas";
+@import "../../node_modules/bootstrap/scss/pagination";
 
 // etc
 // MIXINS

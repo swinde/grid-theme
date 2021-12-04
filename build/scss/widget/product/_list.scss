@@ -62,7 +62,7 @@
 
   &-link {
     display: block;
-    padding: 3px var(--grid__gutter)/2;
+    padding: 3px calc(var(--grid__gutter)/2);
 
     .active &,
     .selected &,
@@ -78,20 +78,11 @@
   padding-bottom: 40px;
   position: relative;
 
-  .actions {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
 
-    .infogrid-view & {
-      left: var(--grid__gutter)/2;
-    }
-  }
 }
 
 .variant-dropdown {
-  margin-top: var(--grid__gutter)/2;
+  margin-top: calc(var(--grid__gutter)/2);
 
   .dropdown-menu {
     &-item {
@@ -109,7 +100,7 @@
 
     &-link {
       display: block;
-      padding: 0 var(--grid__gutter)/2;
+      padding: 0 calc(var(--grid__gutter)/2);
       text-decoration: none;
     }
   }

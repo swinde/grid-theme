@@ -7,14 +7,14 @@
 	.list-filter {
 	  border-top: 1px solid var(--base-border-color);
 	  border-bottom: 1px solid var(--base-border-color);
-	  background-color: var(--color-page-background);
-	  padding: 20px var(--grid__gutter) / 2;
-	  margin: var(--grid__gutter) / 2 0 0 0;
+	  background-color: #f2f2f2;
+	  padding: 20px 15px;
+	  margin: 15px 0 0 0;
 
 	  .btn-group {
 		width: 100%;
 		margin-bottom: 5px;
-		background-color: $white;
+		background-color: var(--color-white);
 
 		@include media-query(screen-md) {
 		  width: auto;

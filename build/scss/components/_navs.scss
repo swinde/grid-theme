@@ -74,9 +74,16 @@
       font-size: 1.1em;
       width: 100%;
     }
-    li.active > a {
-      color: var(--color-secondary);
+
+    li.active{
+      ul.level_2{
+        display: block;
+      }
+      &> a {
+        color: var(--color-secondary);
+      }
     }
+
     ul li ul {
       display: none;
       position: static;
@@ -516,7 +523,7 @@
   }
 }
 .nav--breadcrumb {
-  border: var(--base-border);
+  //border: var(--base-border);
   padding: var(--base-spacing-unit--sm) var(--base-spacing-unit);
   display: flex;
 

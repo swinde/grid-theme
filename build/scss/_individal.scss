@@ -1,26 +1,22 @@
-body.cl-start {
-  background-image: url(../../img/backgrounds/mittelsachsenshop_hg_mobil.jpg);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100vw 100vh;
-  padding-top: 0;
-  @include media-query(screen-sm) {
-    background-image: url(../../img/backgrounds/mittelsachsenshop_hg2.jpg);
-  }
+@import "variables";
+:root{
+  --color-primary:            #7a137f;
 }
-.header {
-  background-color: #f8f9fa;
-  margin: 0 -15px;
-  border-bottom: 2px solid #b2c669;
-  padding-bottom: 2rem;
-  @include media-query(screen-sm) {
-    .inner{
-      margin: 0 15rem;
-    }
+.sidebar {
+  background-color: var(--color-gray-lighter);
+}
+.btn-primary, .page-item.active .page-link {
+  color: var(--color-white);
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
 
+@include media-query(screen-lg) {
+  .nav--main li.active a {
+    padding: var(--nav--main__item-padding);
+    text-decoration: none;
+    font-weight: var(--nav--main-font-weight);
+    background-color: var(--color-navigation-main--active);
+    color: var(--color-white);
   }
-}
-.categorytree {
-  background-color: #f5f5f5;
-  border: 1px solid #b2c669;
 }
