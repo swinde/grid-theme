@@ -71,7 +71,7 @@
       text-decoration: none;
       color: var(--color-primary);
       font-weight: 500;
-      font-size: 1.1em;
+      font-size: var(--nav--main-font-size);
       width: 100%;
     }
 
@@ -93,7 +93,7 @@
     }
     ul > li > ul > li > a {
       @include padding-default();
-      font-size: var(--base-font-size--xs);
+      font-size: var(--nav--main-font-size-xs);
     }
 }}
 // Main Navigation
@@ -115,7 +115,7 @@
       text-decoration: none;
       color: var(--color-primary);
       font-weight: 500;
-      font-size: 1.1em;
+      font-size: var(--nav--main-font-size);
       width: 100%;
     }
     li a:hover{
