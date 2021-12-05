@@ -179,7 +179,7 @@
     .level_1 {
       padding-top: var(--base-spacing-unit);
       padding-bottom: var(--base-spacing-unit);
-      padding-left: 5%;
+      padding-left: 15%;
       padding-right: 5%;
 
       > li > {
@@ -251,7 +251,7 @@
     transition: -webkit-transform 0.3s;
     transition: transform 0.3s;
     transition: transform 0.3s, -webkit-transform 0.3s;
-    max-width: 38vh;
+    max-width: 75vw;
     li {
       opacity: 1;
     }
@@ -267,7 +267,7 @@
     -webkit-transition: max-height 0s, background 0.3s;
     -o-transition: max-height 0s, background 0.3s;
     transition: max-height 0s, background 0.3s;
-    text-align: left;
+    text-align: center;
     background: var(--color-base-overlay-background);
     .page-header{
       color: var(--color-white)
@@ -548,7 +548,12 @@
 }
 //Offvanvas
 .offcanvas-header {
-  color:var(--color-white);
+  color: var(--color-white);
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem;
   @include media-query(screen-lg) {
     position: absolute;
     left: -100vw;
