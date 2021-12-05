@@ -3,18 +3,18 @@
     padding-bottom: 15px;
 
     &-item {
-      &.active {
-        color: var(--color-white);
-        &:hover, &:focus {
+     &.active, &:hover, &:focus {
           color: var(--color-white);
           background-color: $primary;
         }
-      }
+
     }
 
     &-link {
       color:inherit;
       display: block;
+      border:var(--base-border);
+      padding: var(--base-spacing-unit--sm) var(--base-spacing-unit);
     }
   }
 }

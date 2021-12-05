@@ -28,7 +28,7 @@ body {
 }
 
 .inner{
-  padding: 0 1rem;
+  padding: var(--base-spacing-unit) 0;
 }
 .img-thumbnail {
   border: none;
