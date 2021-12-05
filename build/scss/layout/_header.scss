@@ -18,18 +18,7 @@
   background-color: var(--color-page-background);
   margin: 0;
   padding: 1rem 0;
-  .inner {
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: var(--base-spacing-unit);
-    padding-bottom: var(--base-spacing-unit);
-    display: grid;
-    grid-template-columns: auto auto;
-    -webkit-box-align: end;
-    -ms-flex-align: end;
-    align-items: end;
-    position: relative;
-  }
+
 
   .logo {
     &-col{
