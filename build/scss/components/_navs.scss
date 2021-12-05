@@ -92,7 +92,7 @@
       display: block;
     }
     ul > li > ul > li > a {
-      padding-left: var(--base-spacing-unit);
+      @include padding-default();
       font-size: var(--base-font-size--xs);
     }
 }}
@@ -142,7 +142,7 @@
       z-index: 99;
     }
     ul > li > ul > li > a {
-      padding-left: var(--base-spacing-unit);
+      @include padding-default();
       font-size: var(--base-font-size--xs);
 
     }
