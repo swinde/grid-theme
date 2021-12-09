@@ -47,6 +47,7 @@
         [{block name="head_link_canonical"}]
             [{if $canonical_url}]
                 <link rel="canonical" href="[{$canonical_url}]">
+
             [{/if}]
         [{/block}]
 
@@ -224,6 +225,7 @@
         [{include file="i18n/js_vars.tpl"}]
         [{oxscript include="js/script.min.js" priority=1}]
         [{oxscript include="js/menu_toggle.js" priority=1}]
+
     [{/block}]
 
     [{if $oViewConf->isTplBlocksDebugMode()}]
