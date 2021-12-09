@@ -186,6 +186,7 @@ module.exports = function (grunt) {
 	'copy',
 	'sass',
 	'combine_mq',
+	'uglify',
 	'cssmin',
 	'clean'
 	]);
