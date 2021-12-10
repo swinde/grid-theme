@@ -8,9 +8,12 @@
   border: 1px solid rgba(0,0,0,.125);
   border-radius: .25rem;
   .card{
-    width: 33.3333%;
+    @include make-col(12);
+    @include media-query(screen-sm) {
+      @include make-col(6);
+    }
     @include media-query(screen-lg) {
-
+      @include make-col(4);
     }
   }
 
