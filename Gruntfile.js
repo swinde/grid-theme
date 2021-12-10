@@ -75,6 +75,7 @@ module.exports = function (grunt) {
 					'<%= project.out %><%= project.theme %>/src/js/script.min.js': [
 						'<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
 						'<%= project.dev %>build/js/jquery/patch.js',
+						'<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.bundle.js',
 						'<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
 						'<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js',
 						'<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
