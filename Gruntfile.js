@@ -191,6 +191,6 @@ module.exports = function (grunt) {
 		'cssmin',
 		'uglify',
 		'clean',
-		'watch'
+		/*'watch'*/
 	]);
 };
