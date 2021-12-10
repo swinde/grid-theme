@@ -73,19 +73,19 @@ module.exports = function (grunt) {
 			my_target: {
 				files: {
 					'<%= project.out %><%= project.theme %>/src/js/script.min.js': [
-					'<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
-					'<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
-					'<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
-					'<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.bundle.js',
-					'<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js',
-					'<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
-					'<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js',
-					'<%= project.dev %>build/js/main.js',
-					'<%= project.dev %>build/js/side.js',
-					'<%= project.dev %>build/js/pages/compare.js',
-					'<%= project.dev %>build/js/pages/details.js',
-					'<%= project.dev %>build/js/pages/review.js',
-					'<%= project.dev %>build/js/pages/start.js'
+						'<%= project.dev %>node_modules/jquery/dist/jquery.min.js',
+						'<%= project.dev %>build/js/jquery/patch.js',
+						'<%= project.dev %>build/vendor/jquery-ui/js/jquery-ui.js',
+						'<%= project.dev %>node_modules/popper.js/dist/umd/popper.min.js',
+						'<%= project.dev %>node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+						'<%= project.dev %>build/vendor/jquery-unveil/js/jquery.unveil.js',
+						'<%= project.dev %>build/vendor/jquery-flexslider2/js/jquery.flexslider.js',
+						'<%= project.dev %>build/vendor/jquery-bootstrap-validation/js/jqBootstrapValidation.js',
+						'<%= project.dev %>build/js/main.js',
+						'<%= project.dev %>build/js/pages/compare.js',
+						'<%= project.dev %>build/js/pages/details.js',
+						'<%= project.dev %>build/js/pages/review.js',
+						'<%= project.dev %>build/js/pages/start.js'
 					]
 				}
 			}
@@ -183,11 +183,13 @@ module.exports = function (grunt) {
 	* Run `grunt` on the command line
 	*/
 	grunt.registerTask('default', [
-	'copy',
-	'sass',
-	'combine_mq',
-	'uglify',
-	'cssmin',
-	'clean'
+		'copy',
+		'sass',
+		'postcss',
+		'combine_mq',
+		'cssmin',
+		'uglify',
+		'clean',
+		'watch'
 	]);
 };
