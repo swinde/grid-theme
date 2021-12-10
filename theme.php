@@ -226,13 +226,13 @@ $aTheme = array(
             'group' => 'background',
             'name'  => 'sBackgroundColor',
             'type'  => 'str',
-            'value' => '#CCEBF5',
+            'value' => '',
         ),
         array(
             'group' => 'background',
             'name'  => 'sBackgroundPath',
             'type'  => 'str',
-            'value' => 'mein_hintergrundbild.jpg',
+            'value' => '',
         ),
         array(
             'group'       => 'background',
