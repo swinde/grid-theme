@@ -9,7 +9,6 @@
 		"@fortawesome/fontawesome-free": "^5.11.2",
 		"ajv": "^6.10.2",
 		"bootstrap": "4.6.1",
-
 		"grunt": "^1.4.1",
 		"grunt-combine-mq": "^0.9.0",
 		"grunt-contrib-clean": "^2.0.0",
