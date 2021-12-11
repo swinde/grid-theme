@@ -11,12 +11,10 @@
         [{/if}]
         <nav id="navbar_main" class="mobile-offcanvas nav nav--main [{if $showNavHoriz}]nav--horizontal [{else}]nav--vertical[{/if}] nav--mobile col-12 block" role="navigation">
             <div class="offcanvas-header">
-                [{if $showNavHoriz != 'true'}]
-                    <h3 class="d-lg-none py-2 offcanvas-title">[{oxmultilang ident="CATEGORIES"}]</h3>
-                [{/if}]
+                <h3 class="[{if $showNavHoriz == 'true'}]d-lg-none offcanvas-title[{/if}] py-2 ">[{oxmultilang ident="CATEGORIES"}]</h3>
                 <button class="nav-toggler__button btn btn-danger btn-close float-right d-lg-none"> &times Close </button>
             </div>
-
+            <h3 class="[{if $showNavHoriz == 'true'}]d-lg-none[{/if}] py-2 ">[{oxmultilang ident="CATEGORIES"}]</h3>
             [{block name="dd_widget_header_categorylist_navbar"}]
                 <ul class="level_1">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
