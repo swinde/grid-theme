@@ -1,7 +1,7 @@
 [{foreach from=$oxidBlock_sidebar item="_block"}]
     [{$_block}]
 [{/foreach}]
-[{block name="leftcol"}]
+[{block name="sidebar"}]
     [{block name="sidebar_categoriestree"}]
 		<div class="categorytree">
             [{block name="sw_togglemenu_icon"}]

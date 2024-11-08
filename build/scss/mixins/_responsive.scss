@@ -14,7 +14,7 @@
 
 // --------------------------------------------------
 
-@import "../../vendor/nutshell/scss/mixins/responsive";
+//@import "../../vendor/nutshell/scss/mixins/responsive";
 
 // --------------------------------------------------
 
@@ -23,3 +23,79 @@
 // --------------------------------------------------
 
 // PUT YOUR STYLES HERE
+@mixin wrapper-max($width: $wrapper-max) {
+  max-width: $width;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin media-query($mq, $mq-max: false) {
+
+  $breakpoint-found: false;
+
+  // Loop through the list of breakpoints we’ve provided in our settings file.
+  @each $breakpoint, $screen in $all_breakpoints {
+
+    // Grab the alias and the condition from their respective locations in
+    // the list.
+
+    // min-width
+    $size:      $breakpoint; // (xs)
+
+    $alias-min:     "screen-#{$size}"; // (screen-xs)
+    $alias-max:     "screen-#{$size}-max"; // (screen-xs-max)
+    $condition-min: map-get($screen, min);
+    $condition-max: map-get($screen, max);
+
+    //@warn "mq: #{$mq}";
+
+    //@warn "size: #{$size}, alias: #{$alias-min} - #{$alias-max}, condition: #{$condition-min} #{$condition-max}";
+
+
+    // If the media query we’ve specified has an alias and a condition...
+    @if $mq == $alias-min and $mq-max == false {
+
+      // ...tell the mixin that we’ve found it...
+      $breakpoint-found: true;
+
+      // ...and spit it out here.
+      @media screen and (min-width: #{$condition-min}) {
+        @content;
+      }
+
+    }
+    @if $mq == $alias-max {
+      // ...tell the mixin that we’ve found it...
+      $breakpoint-found: true;
+
+      // ...and spit it out here.
+      @media screen and (max-width: #{$condition-max}) {
+        @content;
+      }
+    }
+    @if ($mq == $alias-min and $mq-max == $alias-max)  {
+      // ...tell the mixin that we’ve found it...
+      $breakpoint-found: true;
+
+      // ...and spit it out here.
+      @media screen and (min-width: #{$condition-min}) and (max-width: #{$condition-max}) {
+        @content;
+      }
+    }
+
+  }
+
+  // If the user specifies a non-exitent alias, use variable as min-width.
+  @if ($breakpoint-found == false) {
+    @if ($mq-max == false) {
+      @media screen and (min-width: #{$mq}) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: #{$mq}) and (max-width: #{$mq-max}) {
+        @content;
+      }
+    }
+  }
+}

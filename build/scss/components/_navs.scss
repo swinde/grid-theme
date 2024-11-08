@@ -57,7 +57,7 @@
     ul {
       padding-left: 0;
       list-style: none;
-      display: flex;
+      //display: flex;
       flex-direction: column;
       justify-content: center;
     }
@@ -103,7 +103,7 @@
     ul {
       padding-left: 0;
       list-style: none;
-      display: flex;
+      //display: flex;
       justify-content: start;
       position: relative;
     }
@@ -492,7 +492,7 @@
 }
 //Tabs (Details)
 .nav-tabs {
-  display: flex;
+  //display: flex;
   flex-wrap: wrap;
   border-bottom: 1px solid #dee2e6;
   .nav-item {
@@ -525,7 +525,7 @@
 .nav--breadcrumb {
   border: 0;
   padding: var(--base-spacing-unit--sm) var(--base-spacing-unit);
-  display: flex;
+  //display: flex;
 
   @include media-query(screen-menu) {
     flex-direction: row;
@@ -550,7 +550,7 @@
 .offcanvas-header {
   color: var(--color-white);
   margin-top: 1rem;
-  display: flex;
+  //display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 1rem;

@@ -85,13 +85,13 @@ html {
   --color-purple-lighter:     rgba(191, 108, 255, 0.075);
 
   --color-green-dark:         #264928;
-  --color-green:             #305d33;
+  --color-green:             #82BA00;
 
   /*--color-teal-dark:          hsl(166, 72%, 38%);
   --color-teal:               hsl(166, 72%, 48%);*/
   --color-white:              #FFFFFF;
   --color-orange:            #FF5408;
-  --color-primary:            #009ec0;
+  --color-primary:            var(--color-green);
   --color-secondary:          #fc6621 ;
   --color-tint:              var(--color-purple-lighter);
 
@@ -170,6 +170,11 @@ $brand-primary:   #009ec0 !default;
 $brand-secondary: #fc6621 !default;
 $brand-tertiary: #fff !default;
 
+$green: #80ff82;
+$yellow: #ffe280;
+$red: #f80303;
+$cyan: #7ffbe1;
+
 // stylelint-disable
 $white:    #fff !default;
 $gray-100: #f8f9fa !default;
@@ -199,12 +204,12 @@ $ox-header-color: $ox-color !default;
 
 $primary:       $brand-primary !default;
 $secondary:     $brand-secondary !default;
-//$success:       $green !default;
-//$info:          $cyan !default;
-//$warning:       $yellow !default;
-//$danger:        $red !default;
-//$light:         $gray-100 !default;
-//$dark:          $gray-800 !default;
+$success:       $green !default;
+$info:          $cyan !default;
+$warning:       $yellow !default;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-800 !default;
 
 
 $ox-container-base-background-color:    $white !default;

@@ -5,16 +5,13 @@
             [{assign var="homeSelected" value="true"}]
         [{/if}]
         [{assign var="oxcmp_categories" value=$oxcmp_categories}]
+        [{assign var="blFullwidth" value=$oViewConf->getViewThemeParam('blFullwidthLayout')}]
         [{assign var="showNavHoriz" value=$oViewConf->getViewThemeParam('sw_showNavHoriz')}]
-        [{if $showNavHoriz == 'true'}]
-            [{include file="layout/inc/toggle_button.tpl"}]
-        [{/if}]
-        <nav id="navbar_main" class="mobile-offcanvas nav nav--main [{if $showNavHoriz}]nav--horizontal [{else}]nav--vertical[{/if}] nav--mobile col-12 block" role="navigation">
-            <div class="offcanvas-header">
-                <h3 class="[{if $showNavHoriz == 'true'}]d-lg-none offcanvas-title[{/if}] py-2 ">[{oxmultilang ident="CATEGORIES"}]</h3>
-                <button class="nav-toggler__button btn btn-danger btn-close float-right d-lg-none"> &times Close </button>
+
+        <nav class="nav nav--main [{if $showNavHoriz}]nav--horizontal[{else}]nav--vertical[{/if}] nav--mobile block" role="navigation">
+            <div class="page-header h3  d-lg-none">
+                [{oxmultilang ident="CATEGORIES"}]
             </div>
-            <h3 class="[{if $showNavHoriz == 'true'}]d-lg-none[{/if}] py-2 ">[{oxmultilang ident="CATEGORIES"}]</h3>
             [{block name="dd_widget_header_categorylist_navbar"}]
                 <ul class="level_1">
                         [{block name="dd_widget_header_categorylist_navbar_list"}]
@@ -32,8 +29,8 @@
                                         </li>
                                     [{/foreach}]
 
-                                    <li class="nav-item[{if $homeSelected == 'false' && $ocat->expanded}] active[{/if}][{if $ocat->getSubCats()}] submenu[{/if}]">
-                                        <a href="[{$ocat->getLink()}]"class="nav-link[{if $ocat->getSubCats()}] submenu[{/if}]">
+                                    <li class="nav-item[{if $homeSelected == 'false' && $ocat->expanded}] active[{/if}][{if $ocat->getSubCats()}] dropdown[{/if}]">
+                                        <a class="nav-link" href="[{$ocat->getLink()}]"[{if $ocat->getSubCats()}] class="dropdown-toggle" data-toggle="dropdown"[{/if}]>
                                             [{$ocat->oxcategories__oxtitle->value}][{if $ocat->getSubCats()}] <i class="fa fa-angle-down"></i>[{/if}]
                                         </a>
 

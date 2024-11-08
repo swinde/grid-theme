@@ -1,4 +1,5 @@
 [{if $oDetailsProduct->oxarticles__oxmindeltime->value || $oDetailsProduct->oxarticles__oxmaxdeltime->value}]
+    <br>
     <span class="deliverytime">
         [{oxmultilang ident="DELIVERYTIME_DELIVERYTIME" suffix="COLON"}]
         [{if $oDetailsProduct->oxarticles__oxmindeltime->value && $oDetailsProduct->oxarticles__oxmindeltime->value != $oDetailsProduct->oxarticles__oxmaxdeltime->value}]

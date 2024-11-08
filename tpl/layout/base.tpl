@@ -47,7 +47,6 @@
         [{block name="head_link_canonical"}]
             [{if $canonical_url}]
                 <link rel="canonical" href="[{$canonical_url}]">
-
             [{/if}]
         [{/block}]
 
@@ -135,8 +134,7 @@
         [{/block}]
 
         [{block name="base_style"}]
-            [{oxstyle include="css/styles.min.css"}]
-            [{oxstyle include="css/test.css"}]
+            [{oxstyle include="css/styles.css"}]
         [{/block}]
 
         [{block name="base_fonts"}]
@@ -187,7 +185,7 @@
         [{assign var="sStyle" value="background:`$sBackgroundColor`;"}]
     [{/if}]
 [{elseif $sBackgroundColor}]
-    [{assign var="sStyle" value="background:`$sBackgroundColor`;"}]
+    [{*assign var="sStyle" value="background:`$sBackgroundColor`;"*}]
 [{/if}]
 
 <!DOCTYPE html>
@@ -207,14 +205,12 @@
         [{/if}]
     </head>
     <body class="cl-[{$oView->getClassName()}][{if $smarty.get.plain == '1'}] popup[{/if}][{if $blIsCheckout}] is-checkout[{/if}][{if $oxcmp_user && $oxcmp_user->oxuser__oxpassword->value}] is-logged-in[{/if}]">
-
+    
     [{block name="theme_svg_icons"}][{/block}]
-    <div id="page">
-
+    <div id="wrapper">
             [{foreach from=$oxidBlock_pageBody item="_block"}]
             [{$_block}]
             [{/foreach}]
-
     </div>
 
     [{if $oViewConf->getTopActiveClassName() == 'details' && $oView->showZoomPics()}]
@@ -222,12 +218,9 @@
     [{/if}]
 
     [{block name="base_js"}]
-
         [{include file="i18n/js_vars.tpl"}]
         [{oxscript include="js/script.min.js" priority=1}]
         [{oxscript include="js/menu_toggle.js" priority=1}]
-
-
     [{/block}]
 
     [{if $oViewConf->isTplBlocksDebugMode()}]

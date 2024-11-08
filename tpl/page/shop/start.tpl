@@ -43,7 +43,7 @@
     [{/if}]
 
     [{block name="start_top_articles"}]
-        [{if $oTopArticles && $oTopArticles->count()}]
+        [{if $oTopArticles && $oTopArticles->count(4)}]
             [{include file="widget/product/list.tpl" type=$oViewConf->getViewThemeParam('sStartPageListDisplayType') head="START_TOP_PRODUCTS_HEADER"|oxmultilangassign subhead="START_TOP_PRODUCTS_SUBHEADER"|oxmultilangassign:$oTopArticles->count() listId="topBox" products=$oTopArticles rsslink=$rsslinks.topArticles rssId="rssTopProducts" showMainLink=true iProductsPerLine=4}]
         [{/if}]
     [{/block}]

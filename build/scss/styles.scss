@@ -1,28 +1,28 @@
 // Wave Theme
 @import 'variables';
+@import "config";
 
 @import 'normalize';
 // Custom.scss
 // Option B: Include parts of Bootstrap
 
 // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/bootstrap";
 
 // etc
 // MIXINS
 @import "mixins/general";
 @import "mixins/responsive";
-
 // Including basic 3rd party libs
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/solid';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/regular';
-@import '../../node_modules/@fortawesome/fontawesome-free/scss/brands';
+@import '../vendor/@fortawesome/scss/fontawesome';
+@import '../vendor/@fortawesome/scss/regular';
+@import '../vendor/@fortawesome/scss/solid';
+
 @import '../vendor/font-google/scss/font-google';
 
 //@import "../vendor/nutshell/scss/generic/normalize";
-@import "../vendor/nutshell/scss/generic/contao-reset";
-@import "../vendor/nutshell/scss/generic/box-sizing";
+//@import "../vendor/nutshell/scss/generic/o3-reset";
+//@import "../vendor/nutshell/scss/generic/box-sizing";
 
 @import "../vendor/photoswipe/scss/photoswipe";
 

@@ -19,7 +19,7 @@ body {
   }
 }
 
-[id="page"] {
+[id="wrapper"] {
   background: var(--wrapper-background);
   padding: 0;
   @include media-query(screen-lg) {

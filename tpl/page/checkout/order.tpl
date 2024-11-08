@@ -62,7 +62,7 @@
 
                 [{block name="checkout_order_address"}]
                     <div id="orderAddress" class="row">
-                        <div class="col-12 col-md-6">
+                        <div class="col-xs-12 col-md-6">
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]
@@ -85,7 +85,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-12 col-md-6">
+                        <div class="col-xs-12 col-md-6">
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]
@@ -118,7 +118,7 @@
 
                 [{block name="shippingAndPayment"}]
                     <div class="row">
-                        <div class="col-12 col-md-6" id="orderShipping">
+                        <div class="col-xs-12 col-md-6" id="orderShipping">
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]
@@ -142,7 +142,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col-12 col-md-6" id="orderPayment">
+                        <div class="col-xs-12 col-md-6" id="orderPayment">
                             <form action="[{$oViewConf->getSslSelfLink()}]" method="post">
                                 <div class="hidden">
                                     [{$oViewConf->getHiddenSid()}]

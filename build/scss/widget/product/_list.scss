@@ -36,11 +36,11 @@
 
   h1.h1 {
     font-weight: 200;
-    font-size: $h1-font-size;
+    font-size: var(--base-font-size);
   }
 
   .rss {
-    font-size: $h1-font-size*0.7;
+    //font-size: var(--base-font-size)*0.7;
     color: orange;
   }
 }
