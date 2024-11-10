@@ -13,23 +13,24 @@
 // MIXINS
 @import "mixins/general";
 @import "mixins/responsive";
+
 // Including basic 3rd party libs
 @import '../vendor/@fortawesome/scss/fontawesome';
 @import '../vendor/@fortawesome/scss/regular';
 @import '../vendor/@fortawesome/scss/solid';
 
 @import '../vendor/font-google/scss/font-google';
-
 //@import "../vendor/nutshell/scss/generic/normalize";
 //@import "../vendor/nutshell/scss/generic/o3-reset";
 //@import "../vendor/nutshell/scss/generic/box-sizing";
 
 @import "../vendor/photoswipe/scss/photoswipe";
-
+//@import 'bootstrap/button/buttons';
 @import 'vendor/flexslider';
 @import 'vendor/euf_grid';
 
 @import 'components/navs';
+@import 'components/sidebar'; //Responsive Navigation mit Slide-in Animation
 
 @import 'layout/base';
 @import 'layout/header';
